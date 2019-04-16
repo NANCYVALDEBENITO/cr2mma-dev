@@ -33,7 +33,7 @@ gem 'leaflet-js'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'narray', '~> 0.6.1.2'
 gem 'narray_miss', '~> 1.4'
-gem 'gtk2', '~> 3.3', '>= 3.3.6'
+
 #gem 'gentooboontoo-ruby-netcdf', git:'https://github.com/gentooboontoo/gentooboontoo-ruby-netcdf'
 gem 'open_street_map', git:'https://github.com/WebGents/open_street_map'
 gem 'openlayers-rails', '~> 0.0.4'
