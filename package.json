@@ -1,0 +1,7 @@
+{
+  "name": "cr2mma-dev",
+  "private": true,
+  "dependencies": {
+    "topojson": "^3.0.2"
+  }
+}

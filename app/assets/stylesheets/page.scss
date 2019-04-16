@@ -1,0 +1,129 @@
+// Place all the styles related to the Page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container_v {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.page_body {
+    flex: 2;
+    overflow: auto;
+}
+
+.container_h {
+    display: flex;
+    flex-flow: row;
+}
+
+div {
+    display: block;
+}
+
+/*text*/
+h1 {color: #2f97ca;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto Condensed";
+
+}
+
+h2 {color: black;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+
+}
+
+
+
+/*images*/
+img{
+  height: 50px;
+    display: inline-block;
+}
+
+/*panel left*/
+#tool_panel {
+    padding: 20px;
+    border-right: solid 2px #CCCCCC;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 10px;
+}
+
+.left_panel {
+    min-width: 350px;
+}
+
+tr {
+    display: table-row;
+    vertical-align: left;
+    border-color: inherit;
+}
+
+#headertable {
+    width: 400px;
+}
+
+.toplabel {
+    font-size: 10px;
+    color: #2f97ca;
+    text-align: center;
+}
+.cr2header a {
+    color: #2f97ca;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.map-legend ul {
+  list-style: none;
+  padding-left: 0;
+}
+.map-legend .swatch {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.leaflet-popup-close-button {
+  display: none;
+}
+.leaflet-popup-content-wrapper {
+  pointer-events: none;
+}
+
+
+
+.legend {
+    line-height:40px;
+    color: #555;
+    background-color: #ffffff;
+    width: 90%;
+    margin-right:20%;
+    
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+    opacity: 0.7;
+}
