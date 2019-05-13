@@ -1,147 +1,149 @@
-<h1>Leaflet Example</h1>
+<div style="height:200px;">
+	<br>
+	<h1 style="font-size: 24px; background: "> <%= image_tag("cr2.png", :alt => "Logo Plataforma de visualización cr2") %>
+	 PLATAFORMA DE VISUALIZACIÓN</h1>
+	 <table id="headertable cr2header">
+ 				<tbody>			 				
+		 			<tr>
+		 				<td class="toplabel cr2header"> 
+		 					<span id="help">
+		 						<a href="" target="_blank">Acerca de la plataforma</a>
+		 					</span>
+		 				</td>
+		 				<td class="toplabel cr2header">
+		 					<span id="help">
+		 						<a href="" target="_blank">Ejemplos de uso</a>
+		 					</span>
+		 				</td>
+		 				<td class="toplabel cr2header">
+		 					<span id="help"> 
+		 						<a href="" target="_blank">Descarga los datos de entrada</a>
+		 					</span>
+		 				</td>
+		 			</tr>
+ 				</tbody>
+ 			</table>
+		
+</div>
 
-<%= image_tag("cr2.png", :alt => "Logo Plataforma de visualización cr2") %>
+<div class="container_v">
+ 	<div class="page_body container_h">
+ 		<div>
+ 			
+ 			<h3>PANEL DE CONTROL</h3>
+ 			
 
-	<div class="container_v">
-	 	<div class="page_body container_h">
-	 		<div id="tool_panel" class="left_panel">
-	 			<h1>Plataforma de visualización</h1>
-	 			<br>
-	 			<h2>Panel de Control</h2>
-	 			<table id="headertable cr2header">
-	 				<tbody>			 				
-			 			<tr>
-			 				<td class="toplabel cr2header"> 
-			 					<span id="help">
-			 						<a href="http://www.cr2.cl" target="_blank">Acerca de la plataforma</a>
-			 					</span>
-			 				</td>
-			 				<td class="toplabel cr2header">
-			 					<span id="help">
-			 						<a href="http://www.cr2.cl" target="_blank">Ejemplos de uso</a>
-			 					</span>
-			 				</td>
-			 				<td class="toplabel cr2header">
-			 					<span id="help"> 
-			 						<a href="http://www.cr2.cl" target="_blank">Descarga los datos de entrada</a>
-			 					</span>
-			 				</td>
-			 			</tr>
-	 				</tbody>
-	 			</table>
-	  		<br>	
-	 			<h3>html de prueba test plataforma</h3>
+ 			 <div style="display: flex; align-items:stretch; background-color: #f9f9f9; padding-right: 0px; border: solid 1px gray;border-radius: 5px;margin-top: 20px; max-width: 700px;">
+                <div style="min-width: 250px;margin:0px 10px;  max-width: 700px;">
+                    <div class="row">
+                    	<div class="col-12">
+                    		<div class="pickerlabel_title"> VARIABLES
+                                <div class="tool-tip">
+                                <span class="tool-tip__icon_1" title="Variables disponibles, pronto puedes">?</span>
+                              
+                            </div>
+                        </div>
+                    	</div>
+                        <div class="col-12">
+                            <label class="pickerlabel"> Selecciona la variable </label>
+                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+                              	<button id="pr" type="button" class="btn btn-outline-info " style="width:50%;" data-region="cordex">PRECIPITACIÓN</button>
+                              	<button id="eto"  type="button" class="btn btn-outline-info active" style="width:50%;" >EVAPOTRANSPIRACIÓN</button>
+                             
+                         
+		                    </div>
 
-	 		</div>
-	 		<div id="map" >
+                        </div>
+                        <div class="col-12">
+                    		<div class="pickerlabel_title"> PERIODO
+                                <div class="tool-tip">
+                                <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver d%m%aaaa%">?</span>
+                              
+                            	</div>
+                        	</div>
+
+                    	</div>
+                    	<div class="col-12">
+                            <label class="pickerlabel"> Ingresa la fecha del archivo a visualizar </label>
+                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+                            	<table style="width: 20px;">
+                            		<tbody style="width: 20px;">
+                            			<tr>
+                            				<td><label class="pickerlabel"> día </label></td>
+                            				<td><label class="pickerlabel"> mes </label></td>
+                            				<td><label class="pickerlabel"> año </label></td>
+		                            		
+		                            	</tr>
+		                            	<tr>
+		                            		<td><input size="2" name="" id="day" value="01" style="width: 40px;"></td>
+		                              		<td><input type="2" name="" id="month" value="01" style="width: 40px;"></td>
+		                              		<td><input type="4" name="" id="year" value="1980" style="width: 50px;"></td>
+		                              	</tr>
+		                              	
+	                              
+	                              
+                              		</tbody>
+                             	</table>
+                             	 
+				             
+
+                         
+		                    </div>
+		                    <div class="row">
+			                    <div class="col-12">
+	                            
+		                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+		                            	<div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+				                              	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;" data-region="cordex">CARGAR</button>
+				                              	                             
+				                         
+						                </div>
+						            </div>
+			                    </div>
+		                	</div>
+		                    <div class="row">
+	                    		<div class="col-12">
+		                    		<div class="pickerlabel_title"> DESCARGA EL ARCHIVO
+		                                <div class="tool-tip">
+		                                <span class="tool-tip__icon_1" title="Variables disponibles, pronto puedes">?</span>
+		                              
+		                            	</div>
+			                        </div>
+		                    	</div>
+		                        <div class="col-12">
+		                            <label class="pickerlabel"> Descargar como geojson </label>
+		                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+		                              	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;" data-region="cordex">DOWNLOAD</button>
+		                              	                             
+		                         
+				                    </div>
+				                </div>
+
+                        </div>
+
+                        </div>
+
+                     </div>
+
+                     <br>
+                </div>
+            </div>
+
+ 		</div>
+ 		<div id="map" >
+  
+			
+		</div>
  
-	    
-				<script type="text/javascript">
+ 	</div>
+ </div>
 
-				var map = L.map( 'map', {
-				    center: [-37.457, -69.662],
-				    minZoom: 2,
-				    zoom: 5
-				});
+ <div style="background-color: #eeeeee;padding: 10px; margin: 10px">
+ 	<p>Plataforma</p>
+ 	<p>En marcha blanca</p>
+ 
+ </div>
 
-
-				L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-				    subdomains: ['a','b','c']
-				}).addTo( map );
-				
-
-		       
-		        var data = $.ajax({
-		        	url: 'eto/ET0_1980_01_01_X_Harg_nc_v3.json',
-		        	dataType: "json",
-		            success: console.log("County data successfully loaded."),
-		            error: function(xhr) {
-		                alert(xhr.statusText)
-		            }
-		        })
-
-		        function getColor(d) {
-				    return d > 7 ? '#49006a' :
-				    	   d > 6 ? '#7a0177' :
-				    	   d > 5  ? '#ae017e' :
-				           d > 4  ? '#dd3497' :
-				           d > 3 ? '#f768a1' :
-				           d > 2  ? '#fa9fb5' :
-				           d > 1   ? '#fcc5c0' :
-				           d > 0   ? '#fde0dd' :
-				            		 '#fff7f3' ;
-				                     
-				}
-				
-
-		        function style(feature) {
-				    return {
-				        fillColor: getColor(feature.properties.n),
-				        weight: 2,
-				        opacity: 1,
-				        color: 'white',
-				        dashArray: '3',
-				        fillOpacity: 0.7
-				    };
-				}
-
-				var legend = L.control({position: 'bottomright'});
-
-				legend.onAdd = function (map) {
-
-				    var div = L.DomUtil.create('div', 'info legend'),
-				        grades = [0, 1, 2, 3, 4, 5, 6, 7],
-				        labels = [];
-
-				    div.innerHTML +='<p> Evapotranspiración  </p>'
-
-				    // loop through our density intervals and generate a label with a colored square for each interval
-				    for (var i = 0; i < grades.length; i++) {
-				        div.innerHTML +=
-
-				            '<i style="background:' + getColor(grades[i] + 1) + '"></i> '+
-				            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>':'+');
-				    }
-
-				    return div;
-				};
-
-				legend.addTo(map);
-
-									
-
-		        $.when(data).done(function() {
-		            
-		            // var basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-		            //     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-		            //     subdomains: 'abcd',
-		            //     maxZoom: 19
-		            // }).addTo(map);
-		            // Add requested external GeoJSON to map
-		            var kyCounties = L.geoJSON(data.responseJSON,{
-			            style: style}).addTo(map);
-
-
-		        })
-
-			       
-
-		  
-
-				</script>
-				
-			</div>
-	 
-	 	</div>
-	 </div>
-
-	 <div style="background-color: #eeeeee;padding: 10px; margin: 10px">
-	 	<p>Plataforma</p>
-	 	<p>En marcha blanca</p>
-	 
-	 </div>
-	
-	 <h6 style="margin: 10px">autor: nvaldebenito</h6>
-	 
+ <h6 style="margin: 10px">autor: nvaldebenito</h6>
+ 
 

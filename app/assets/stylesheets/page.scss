@@ -109,7 +109,20 @@ body {
   pointer-events: none;
 }
 
+.pickerlabel {
+margin-top: 8px;
+margin-bottom: 5px;
+font-size: 11px;
+color: gray;
+}
 
+.pickerlabel_title {
+margin-top: 8px;
+margin-bottom: 5px;
+font-size: 12px;
+color: gray;
+font-weight: bold;
+}
 
 .legend {
     line-height:40px;
@@ -126,4 +139,37 @@ body {
     margin-right: 20px;
     margin-left: 20px;
     opacity: 0.7;
+}
+
+
+.tool-tip{
+    display: inline-block;
+    position: relative;
+    margin-left: .5em;
+}
+
+.tool-tip .tool-tip__icon_1{
+    /*background:#27b1f0;*/
+    background:#0071bc;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    line-height: 1.3em;
+    text-align: center;
+    color:#fff;
+}
+
+.tool-tip .tool-tip__icon_2{
+    /*background:#27b1f0;*/
+    background:gray;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    line-height: 1.3em;
+    text-align: center;
+    color:#fff;
 }
