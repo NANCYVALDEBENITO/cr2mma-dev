@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'page/contornos', :defaults => { :format => 'json' }
   get 'page/geojson', :defaults => { :format => 'json' }
+  post 'first/save'
   get 'eto/ET0_1980_01_01_X_Harg_nc_v3', :defaults => { :format => 'json' }
   
 end

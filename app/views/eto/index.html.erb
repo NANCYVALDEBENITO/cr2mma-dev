@@ -39,15 +39,15 @@
                     	<div class="col-12">
                     		<div class="pickerlabel_title"> VARIABLES
                                 <div class="tool-tip">
-                                <span class="tool-tip__icon_1" title="Variables disponibles, pronto puedes">?</span>
+                                <span class="tool-tip__icon_1" title="Variables disponibles">?</span>
                               
                             </div>
                         </div>
                     	</div>
                         <div class="col-12">
                             <label class="pickerlabel"> Selecciona la variable </label>
-                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
-                              	<button id="pr" type="button" class="btn btn-outline-info " style="width:50%;" data-region="cordex">PRECIPITACIÓN</button>
+                            <div class="btn-group btn-block" style="margin-top: 5px;">
+                              	<button id="pr" type="button" class="btn btn-outline-info" style="width:50%;">PRECIPITACIÓN</button>
                               	<button id="eto"  type="button" class="btn btn-outline-info active" style="width:50%;" >EVAPOTRANSPIRACIÓN</button>
                              
                          
@@ -65,22 +65,24 @@
                     	</div>
                     	<div class="col-12">
                             <label class="pickerlabel"> Ingresa la fecha del archivo a visualizar </label>
-                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
+                            <div class="btn-group btn-block" style="margin-top: 5px;">
                             	<table style="width: 20px;">
                             		<tbody style="width: 20px;">
-                            			<tr>
-                            				<td><label class="pickerlabel"> día </label></td>
-                            				<td><label class="pickerlabel"> mes </label></td>
-                            				<td><label class="pickerlabel"> año </label></td>
-		                            		
-		                            	</tr>
-		                            	<tr>
-		                            		<td><input size="2" name="" id="day" value="01" style="width: 40px;"></td>
-		                              		<td><input type="2" name="" id="month" value="01" style="width: 40px;"></td>
-		                              		<td><input type="4" name="" id="year" value="1980" style="width: 50px;"></td>
-		                              	</tr>
-		                              	
-	                              
+                            			
+		                            	<form accept-charset="UTF-8" action="/first/save" method="post">
+		                            		<tr>
+	                            				<td><label for="day" class="pickerlabel"> día </label></td>
+	                            				<td><label for="month" class="pickerlabel"> mes </label></td>
+	                            				<td><label for="year" class="pickerlabel"> año </label></td>
+			                            		
+			                            	</tr>
+			                            	<tr>
+												 	<td><input size="2" name="" id= "day" value=<%="01"%> style="width: 40px;"></td>
+				                              		<td><input type="2" name="" id="month" value=<%="01"%> style="width: 40px;"></td>
+				                              		<td><input type="4" name="" id="year" value=<%="1980"%> style="width: 50px;"></td>
+												
+			                              	</tr>
+		                              	</form>
 	                              
                               		</tbody>
                              	</table>
@@ -92,9 +94,9 @@
 		                    <div class="row">
 			                    <div class="col-12">
 	                            
-		                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
-		                            	<div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
-				                              	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;" data-region="cordex">CARGAR</button>
+		                            <div class="btn-group btn-block"style="margin-top: 5px;">
+		                            	<div class="btn-group btn-block"  style="margin-top: 5px;">
+				                              	<button id="restart" type="button" class="btn btn-outline-info " style="width:20%;" >CARGAR</button>
 				                              	                             
 				                         
 						                </div>
@@ -105,15 +107,15 @@
 	                    		<div class="col-12">
 		                    		<div class="pickerlabel_title"> DESCARGA EL ARCHIVO
 		                                <div class="tool-tip">
-		                                <span class="tool-tip__icon_1" title="Variables disponibles, pronto puedes">?</span>
+		                                <span class="tool-tip__icon_1" title="Descarga el archivo">?</span>
 		                              
 		                            	</div>
 			                        </div>
 		                    	</div>
 		                        <div class="col-12">
 		                            <label class="pickerlabel"> Descargar como geojson </label>
-		                            <div class="btn-group btn-block" role="group" aria-label="First group" style="margin-top: 5px;">
-		                              	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;" data-region="cordex">DOWNLOAD</button>
+		                            <div class="btn-group btn-block" style="margin-top: 5px;">
+		                              	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;">DOWNLOAD</button>
 		                              	                             
 		                         
 				                    </div>
