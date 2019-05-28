@@ -24,11 +24,11 @@ $(function(){
     })
 
     function downloadObjectAsJson(exportObj, exportName){
-        //var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
         
         
         var downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href",     exportObj);
+        downloadAnchorNode.setAttribute("href",     dataStr);
         downloadAnchorNode.setAttribute("download", exportName + ".json");
         document.body.appendChild(downloadAnchorNode); // required for firefox
         downloadAnchorNode.click();
@@ -37,9 +37,7 @@ $(function(){
 
 
 
-    $("#geojson").on('click', function () {
-        $("#geojson").addClass('active');
-    })
+
     $("#restart").on('click', function (day,month,year,variable) {
    
 
@@ -105,8 +103,15 @@ $(function(){
             }
         })
 
-       
-         
+       $("#geojson").on('click', function () {
+            $("#geojson").addClass('active');
+            if ($("#geojson").hasClass('active')){
+                downloadObjectAsJson(data.responseJSON, variable)
+                console.log(data.responseJSON)
+            }
+
+        })
+        
 
         
 
