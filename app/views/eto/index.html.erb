@@ -63,23 +63,52 @@
                         	</div>
 
                     	</div>
-                    	<div class="col-12">
+                    	<div class="col-12" >
                             <label class="pickerlabel"> Ingresa la fecha del archivo a visualizar </label>
-                            <div class="btn-group btn-block" style="margin-top: 5px;">
+                            
+                            <div class="btn-group btn-block" id="eto_date" style="margin-top: 5px;">
                             	<table style="width: 20px;">
                             		<tbody style="width: 20px;">
                             			
 		                            	<form accept-charset="UTF-8" action="/first/save" method="post">
 		                            		<tr>
-	                            				<td><label for="day" class="pickerlabel"> día </label></td>
-	                            				<td><label for="month" class="pickerlabel"> mes </label></td>
-	                            				<td><label for="year" class="pickerlabel"> año </label></td>
+	                            				<td><label for="day-eto" class="pickerlabel"> día </label></td>
+	                            				<td><label for="month-eto" class="pickerlabel"> mes </label></td>
+	                            				<td><label for="year-eto" class="pickerlabel"> año </label></td>
 			                            		
 			                            	</tr>
 			                            	<tr>
-												 	<td><input size="2" name="" id= "day" value=<%="01"%> style="width: 40px;"></td>
-				                              		<td><input type="2" name="" id="month" value=<%="01"%> style="width: 40px;"></td>
-				                              		<td><input type="4" name="" id="year" value=<%="1980"%> style="width: 50px;"></td>
+												 	<td><input size="2" name="" id= "day-eto" value=<%="01"%> style="width: 40px;"></td>
+				                              		<td><input type="2" name="" id="month-eto" value=<%="01"%> style="width: 40px;"></td>
+				                              		<td><input type="4" name="" id="year-eto" value=<%="1980"%> style="width: 50px;"></td>
+												
+			                              	</tr>
+		                              	</form>
+	                              
+                              		</tbody>
+                             	</table>
+                             	 
+				             
+
+                         
+		                 	</div>
+
+		                   
+                            <div class="btn-group btn-block" id="pr_date" style="margin-top: 5px;">
+                            	<table style="width: 20px;">
+                            		<tbody style="width: 20px;">
+                            			
+		                            	<form accept-charset="UTF-8" action="/first/save" method="post">
+		                            		<tr>
+	                            				
+	                            				<td><label for="month-pr" class="pickerlabel"> mes </label></td>
+	                            				<td><label for="year-pr" class="pickerlabel"> año </label></td>
+			                            		
+			                            	</tr>
+			                            	<tr>
+				
+				                              		<td><input type="2" name="" id="month-pr" value=<%="01"%> style="width: 40px;"></td>
+				                              		<td><input type="4" name="" id="year-pr" value=<%="1980"%> style="width: 50px;"></td>
 												
 			                              	</tr>
 		                              	</form>

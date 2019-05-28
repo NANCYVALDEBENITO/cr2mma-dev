@@ -13,14 +13,20 @@ $(function(){
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
             subdomains: ['a','b','c']
         }).addTo( map );
+    $("#eto").addClass('active');
+    $("#pr_date").hide();
 
     $("#pr").on('click', function () {
         $("#eto").removeClass('active');
         $("#pr").addClass('active');
+        $("#eto_date").hide();
+        $("#pr_date").show();
     })
     $("#eto").on('click', function () {
         $("#pr").removeClass('active');
         $("#eto").addClass('active');
+        $("#eto_date").show();
+        $("#pr_date").hide();
     })
 
     function downloadObjectAsJson(exportObj, exportName){
@@ -66,17 +72,11 @@ $(function(){
 
 
 
-        var day         = document.getElementById('day').value;
-        var month       = document.getElementById('month').value;
-        var year        = document.getElementById('year').value;
-
-
-        
-        console.log(day)
-        console.log(month)
-        console.log(year)
-
         if ($("#pr").hasClass('active')){
+        
+        var month       = document.getElementById('month-pr').value;
+        var year        = document.getElementById('year-pr').value;
+
         
         url = "Chile-CHIRPSv20_MonthlyPCP-"+year+"-"+month+"-LatLong_EPSG4326.json"
         variable    = "Precipitación [mm]"
@@ -84,6 +84,11 @@ $(function(){
 
         }else if($("#eto").hasClass('active')){
         
+        var day         = document.getElementById('day-eto').value;
+        var month       = document.getElementById('month-eto').value;
+        var year        = document.getElementById('year-eto').value;
+
+
         url = "ET0_"+year+"_"+month+"_"+day+"_X_Harg_nc_v3.json"
         variable    = "Evapotranspiración [mm]";
       
@@ -109,6 +114,7 @@ $(function(){
                 downloadObjectAsJson(data.responseJSON, variable)
                 console.log(data.responseJSON)
             }
+            $("#geojson").removeClass('active');
 
         })
         
