@@ -15,31 +15,36 @@ $(function(){
         }).addTo( map );
     $("#eto").addClass('active');
     $("#pr_date").hide();
+    $("#pr_date_start").hide();
+    $("#pr_date_end").hide();
 
     $("#pr").on('click', function () {
         $("#eto").removeClass('active');
         $("#pr").addClass('active');
+
         $("#eto_date").hide();
+        $("#eto_date_start").hide();
+        $("#eto_date_end").hide();
+
         $("#pr_date").show();
+        $("#pr_date_start").show();
+        $("#pr_date_end").show();
+
     })
     $("#eto").on('click', function () {
         $("#pr").removeClass('active');
         $("#eto").addClass('active');
+
         $("#eto_date").show();
+        $("#eto_date_start").show();
+        $("#eto_date_end").show();
+
         $("#pr_date").hide();
+        $("#pr_date_start").hide();
+        $("#pr_date_end").hide();
     })
 
-    function downloadObjectAsJson(exportObj, exportName){
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
-        
-        
-        var downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href",     dataStr);
-        downloadAnchorNode.setAttribute("download", exportName + ".json");
-        document.body.appendChild(downloadAnchorNode); // required for firefox
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
-    }
+    
 
 
 
@@ -111,7 +116,7 @@ $(function(){
        $("#geojson").on('click', function () {
             $("#geojson").addClass('active');
             if ($("#geojson").hasClass('active')){
-                downloadObjectAsJson(data.responseJSON, variable)
+                geofunction.download(data.responseJSON, variable)
                 console.log(data.responseJSON)
             }
             $("#geojson").removeClass('active');
@@ -120,15 +125,15 @@ $(function(){
         
 
         
-
-       
         function getMaxOfArray(numArray) {
-          return Math.max.apply(null, numArray);
+        return Math.max.apply(null, numArray);
         }
         function getMinOfArray(numArray) {
           return Math.min.apply(null, numArray);
         }
 
+       
+        
 
        
         
