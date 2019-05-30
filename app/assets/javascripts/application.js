@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require geofunction.js
+//= require geofunction
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
