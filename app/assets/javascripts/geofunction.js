@@ -20,35 +20,33 @@ Geofunction={
     getMin: function getMinOfArray(numArray){
     	return Math.min.apply(null, numArray);
     },
+    average: function average(elmt){
+      var sum = 0;
+      for( var i = 0; i < elmt.length; i++ ){
+          sum += parseInt( elmt[i], 10 ); //don't forget to add the base
+      }
 
-	getColor: function getColor(d, min_value, max_value){
-
-        value = max_value - min_value;
-        diff  = value/8;
-
-        
-        return d > max_value ? '#49006a' :
-               d > min_value+6*diff ? '#7a0177' :
-               d > min_value+5*diff  ? '#ae017e' :
-               d > min_value+4*diff  ? '#dd3497' :
-               d > min_value+3*diff ? '#f768a1' :
-               d > min_value+2*diff  ? '#fa9fb5' :
-               d > min_value+diff  ? '#fcc5c0' :
-               d > min_value  ? '#fde0dd' :
-                         '#fff7f3' ;
+      var avg = sum/elmt.length;
+      return avg
     },
-    addValueInObject: function addValueInObject(object, key, value) {
-                var res = {};
-                var textObject = JSON.stringify(object);
-                console.log(textObject)
-                if (textObject === '{}') {
-                    res = JSON.parse('{"' + key + '":"' + value + '"}');
-                } else {
-                    res = JSON.parse('{' + textObject.substring(1, textObject.length - 1) + ',"' + key + '":"' + value + '"}');
-                }
-                return res;
-            }
 
+  	getColor: function getColor(d, min_value, max_value){
+
+          value = max_value - min_value;
+          diff  = value/8;
+
+          
+          return d > max_value ? '#49006a' :
+                 d > min_value+6*diff ? '#7a0177' :
+                 d > min_value+5*diff  ? '#ae017e' :
+                 d > min_value+4*diff  ? '#dd3497' :
+                 d > min_value+3*diff ? '#f768a1' :
+                 d > min_value+2*diff  ? '#fa9fb5' :
+                 d > min_value+diff  ? '#fcc5c0' :
+                 d > min_value  ? '#fde0dd' :
+                           '#fff7f3' ;
+      },
+    
                              
         //$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
 
