@@ -4,7 +4,7 @@
 
 // Draw map
 $(function(){
-     var map = L.map( document.getElementById('map'), {
+    var map = L.map( document.getElementById('map'), {
             center: [-39.457, -69.662],
             minZoom: 2,
             zoom: 5
@@ -50,28 +50,23 @@ $(function(){
 
 
     $("#restart").on('click', function (day,month,year,variable) {
-   
-
-        var removeMarkers = function() {
-            map.eachLayer( function(layer) {
-
-              if ( layer.myTag &&  layer.myTag === "myGeoJSON") {
-                map.removeLayer(layer)
-                  }
-
-                });
-
-        }
-
+ 
+        
         document.getElementById('restart').addEventListener('click', function () {
         map.removeControl(legend); 
-        removeMarkers()})
-     
+        map.eachLayer(function (layer) {
+            map.removeLayer(myGeoJSON)
+          
+        });
+        console.log("reading GEOJSON")
+        console.log(myGeoJSON)
+        })
         L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
             subdomains: ['a','b','c']
         }).addTo( map );
-
+        
+       
 
         if ($("#pr").hasClass('active')){
         
@@ -198,13 +193,22 @@ $(function(){
                 fillOpacity: 1
             };
         }
-   
+        var myGeoJSON;
+        $.ajaxSetup({
+            async: false
+        });
+
+
         $.when(data).done(function() {
 
     
-            var myGeoJSON = L.geoJSON(data.responseJSON, {style: style }).addTo(map);
+            myGeoJSON = L.geoJSON(data.responseJSON, {style: style }).addTo(map);
             //for changing latitudes to remap 
              console.log(myGeoJSON._layers)
+
+        $.ajaxSetup({
+            async: true
+        });
 
 
 
@@ -220,20 +224,13 @@ $(function(){
     $("#average").on('click', function (day,month,year,variable) {
    
 
-        var removeMarkers = function() {
-            map.eachLayer( function(layer) {
-
-              if ( layer.myTag &&  layer.myTag === "myGeoJSON") {
-                map.removeLayer(layer)
-                  }
-
-                });
-
-        }
-
         document.getElementById('average').addEventListener('click', function () {
         map.removeControl(legend); 
-        removeMarkers()})
+        map.eachLayer(function (layer) {
+            map.removeLayer(myGeoJSON)
+          
+        });
+        })
      
         L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
