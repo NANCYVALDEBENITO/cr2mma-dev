@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require geofunction
+//= require plotly
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

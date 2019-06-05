@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'leaflet-rails', '~> 0.7.7'
 gem 'leaflet-js'
+#plot series on map
+gem 'plotlyjs-rails'
 #gem 'mapknitter', git:'https://github.com/publiclab/mapknitter.git'
 #gem 'leaflet-geotiff', git:'https://github.com/stuartmatthews/leaflet-geotiff'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'

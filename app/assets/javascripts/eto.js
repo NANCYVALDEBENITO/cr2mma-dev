@@ -373,11 +373,9 @@ $(function(){
                 //     }
                 // })
                
-
               
                 console.log(url[e])
-
-                
+               
 
                 $.getJSON(url[e], function (data) {
                     var items =[];
@@ -424,8 +422,19 @@ $(function(){
             $.ajaxSetup({
                 async: true
             });
+            var dataseries = [
+              {
+                x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
+                y: chart,
+                type: 'scatter'
+              }
+            ];
+
+            Plotly.newPlot('chart', dataseries);
+
         }
         average_chart(-72.5999984, -45.20000141851692) 
+
 
        // $("#geojson").on('click', function () {
        //      $("#geojson").addClass('active');
