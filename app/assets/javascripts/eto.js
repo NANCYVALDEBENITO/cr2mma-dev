@@ -248,6 +248,7 @@ $(function(){
 
             var i
             var url=[]
+            var time=[]
 
             //console.log(year_end)
             //console.log(year_start)
@@ -313,6 +314,7 @@ $(function(){
                     //months.push()
 
                     url.push("Chile-CHIRPSv20_MonthlyPCP-"+String(year_start)+"-"+String(months[i])+"-LatLong_EPSG4326.json") ;
+                    time.push(String(year_start)+'-'+String(months[i]))
                     
 
                 }
@@ -424,7 +426,7 @@ $(function(){
             });
             var dataseries = [
               {
-                x: ['2013-10-04 22:23:00', '2013-11-04 22:23:00', '2013-12-04 22:23:00'],
+                x: time,
                 y: chart,
                 type: 'scatter'
               }
