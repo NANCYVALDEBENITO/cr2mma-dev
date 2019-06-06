@@ -29,6 +29,13 @@ Geofunction={
       var avg = sum/elmt.length;
       return avg
     },
+    error: function error(elmt){
+      for( var i = 0; i < elmt.length; i++ ){
+        var error = Math.sqrt(((average(elmt)-elmt[i])*(average(elmt)-elmt[i]))/(elmt.length-1))
+        return error
+      }
+      
+    },
 
   	getColor: function getColor(d, min_value, max_value){
 

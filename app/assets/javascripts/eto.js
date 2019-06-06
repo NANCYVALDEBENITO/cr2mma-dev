@@ -247,16 +247,14 @@ $(function(){
 
 
             var i
+            //read files
             var url=[]
+            //by chart
             var time=[]
 
-            //console.log(year_end)
-            //console.log(year_start)
             months_number = (parseInt(year_end)-parseInt(year_start))*12 -parseInt(month_start)+parseInt(month_end)+1
             years_number  = parseInt(year_end)-parseInt(year_start)
 
-            console.log(months_number)
-            console.log(years_number)
             if (years_number >= 1){
                 //more than one year
                 months=[];
@@ -339,9 +337,7 @@ $(function(){
             var day_end           = document.getElementById('day-eto-end').value;
             var month_end         = document.getElementById('month-eto-end').value;
             var year_end          = document.getElementById('year-eto-end').value;
-
-
-
+            
             url = "ET0_"+year+"_"+month+"_"+day+"_X_Harg_nc_v3.json"
             variable    = "Evapotranspiración [mm]";
           
@@ -349,41 +345,59 @@ $(function(){
         }
 
         var max,min;      
-        
-        //console.log(url)
-        //console.log(url.length)
-
+       
         function average_chart(lat, lon){
             chart=[];
             
             // Set the global configs to synchronous 
+            
             $.ajaxSetup({
                 async: false
             });
-
             for (e = 0; e < url.length; e++) { 
+                var items =[];
                 
-                
-                
-                console.log(e)
-                // var data = $.ajax({
-                //     url: url[m],
-                //     dataType: "json",
-                //     success: console.log("County data successfully loaded."),
-                //     error: function(xhr) {
-                //         alert(xhr.statusText)
-                //     }
-                // })
-               
-              
-                console.log(url[e])
-               
+                // $.ajax({
+                //     url: url[e],
+                //     type: 'GET',
+                //     dataType: 'json',
+                //     cache: false,
+                //     success: function(data){
+                                                                        
+                //         $.each(data.features, function (key, val) {
+                //             $.each(val.geometry.coordinates, function(i,j){ 
+                //                 for (f = 0; f < j.length; f++) { 
+                //                     if (lat == j[f][0] && lon == j[f][1]){
+                //                         $.each(j, function(i,j){
+                //                             if (lat == j[0] && lon == j[1]){
+                //                                 $.each(val.properties, function(u,v){
+                //                                     items.push( v );
+                //                                 })
+                //                             }
 
+                //                         })
+                //                     }
+                                    
+                //                 } 
+                //             })
+                            
+
+                //         })
+                //         console.log(data)
+                    
+                    
+                    
+                //     }
+                //   });
+             
                 $.getJSON(url[e], function (data) {
-                    var items =[];
-                    jsonIssues = data.features;
+                    
+                    console.log(url[e])
+                    console.log(data)
+                    
                     $.each(data.features, function (key, val) {
-                        $.each(val.geometry.coordinates, function(i,j){
+                        
+                        $.each(val.geometry.coordinates, function(i,j){ 
                             for (f = 0; f < j.length; f++) { 
                                 if (lat == j[f][0] && lon == j[f][1]){
                                     $.each(j, function(i,j){
@@ -398,28 +412,21 @@ $(function(){
                             }  
                         })
                     })
-                    //console.log(items)
-                    console.log(items)
-                    chart.push(Geofunction.average(items));
-                   
+                    data ={}
+                    console.log(data)
+                });
 
-                   
-                   
-                })
-                
-                //console.log(items)
-                //chart.push(Geofunction.average(items));
-                //items =[];
-
-          
-           
+                    
+                    
+                    
+                // })
+                chart.push(Geofunction.average(items));
+              
 
             }
             console.log(chart)
-              
-            var chart = chart.filter(function(x){ return x > -1 });
-            //max = Geofunction.getMax(items);
-            //min = Geofunction.getMin(items);
+            
+            
             // Set the global configs back to asynchronous 
             $.ajaxSetup({
                 async: true
