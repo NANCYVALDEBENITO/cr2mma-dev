@@ -50,7 +50,7 @@ $(function(){
     });
 
     
-    L.Icon.Default.imagePath = '/assets/'
+    L.Icon.Default.imagePath = '/assets/images/'
 
     var marker = L.marker([-45.20000141851692,-72.5999984]).addTo(map);
 
