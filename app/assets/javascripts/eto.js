@@ -44,9 +44,32 @@ $(function(){
         $("#pr_date_end").hide();
     })
 
+    var latlngEvent
+    L.Icon.Default.imagePath = '/assets/'
+
+    var marker = L.marker([-39.457, -69.662]).addTo(map);
+
+    var updateMarker = function(lat, lng) {
+    marker
+        .setLatLng([lat, lng])
+        .bindPopup("Your location :  " + marker.getLatLng().toString())
+        .openPopup();
+    latlngEvent = marker.getLatLng()
+    return false;
+    };
+
+    var updateMarkerByInputs = function() {
+        return updateMarker( $('#latInput').val() , $('#lngInput').val());
+        }
+    $('#latInput').on('input', updateMarkerByInputs);
+    $('#lngInput').on('input', updateMarkerByInputs);
+
+    map.on('click', function(e) {
+        $('#latInput').val(e.latlng.lat);
+        $('#lngInput').val(e.latlng.lng);
+        updateMarker(e.latlng.lat, e.latlng.lng);
+    });
     
-
-
 
 
     $("#restart").on('click', function (day,month,year,variable) {
@@ -399,9 +422,9 @@ $(function(){
                         
                         $.each(val.geometry.coordinates, function(i,j){ 
                             for (f = 0; f < j.length; f++) { 
-                                if (lat == j[f][0] && lon == j[f][1]){
+                                if (lon == j[f][0]  && lat == j[f][1]){
                                     $.each(j, function(i,j){
-                                        if (lat == j[0] && lon == j[1]){
+                                        if ( ((lon <= j[0] <= lon +0.1)) && ((lat -0.1<= j[1] <= lat+0.1)) ){
                                             $.each(val.properties, function(u,v){
                                                 items.push( v );
                                             })
@@ -435,14 +458,22 @@ $(function(){
               {
                 x: time,
                 y: chart,
-                type: 'scatter'
+                type: 'scatter',
+                
+
               }
             ];
-
-            Plotly.newPlot('chart', dataseries);
+            var layout = {
+              title: variable
+            }
+            console.log(variable)
+            Plotly.newPlot('chart', dataseries, layout);
 
         }
-        average_chart(-72.5999984, -45.20000141851692) 
+       //average_chart(-45.20000141851692,-72.5999984 ) 
+        average_chart(latlngEvent[0], latlngEvent[1])
+
+       
 
 
        // $("#geojson").on('click', function () {

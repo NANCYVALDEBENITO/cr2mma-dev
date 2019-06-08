@@ -27,8 +27,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'leaflet-rails', '~> 0.7.7'
+#gem 'leaflet-rails', github: 'axyjo/leaflet-rails', ref: '7eab9e5d01faa3fadce0650491c0c911ae36d0b9'
 gem 'leaflet-js'
-#plot series on map
+gem 'leaflet-awesome-markers-rails', '~> 2.0'
 gem 'plotlyjs-rails'
 #gem 'mapknitter', git:'https://github.com/publiclab/mapknitter.git'
 #gem 'leaflet-geotiff', git:'https://github.com/stuartmatthews/leaflet-geotiff'

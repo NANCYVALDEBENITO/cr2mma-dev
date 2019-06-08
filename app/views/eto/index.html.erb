@@ -29,11 +29,8 @@
 <div class="container_v">
  	<div class="page_body container_h">
  		<div>
- 			
- 			<h3>PANEL DE CONTROL</h3>
- 			
-
- 			<div style="display: flex; align-items:stretch; background-color: #f9f9f9; padding-right: 0px; border: solid 1px gray;border-radius: 5px;margin-top: 20px; max-width: 700px;">
+ 		
+ 			<div style="display: flex; align-items:stretch; background-color: #f9f9f9; padding-right: 0px; border: solid 1px gray;border-radius: 5px; max-width: 700px;">
         <div style="min-width: 250px;margin:0px 10px;  max-width: 700px;">
           <div class="row">
           	<div class="col-12">
@@ -291,6 +288,26 @@
              	</table>
         		</div>
           </div>
+           <div class="row">
+            <div class="col-4">
+                
+              <label for="latInput" class="pickerlabel">Latitude</label>
+            </div>
+            <div class="col-8">
+              <input id="latInput"/>
+            </div>
+          </div>
+            
+          <div class = "row">
+            <div class="col-4">
+                
+              <label for="lngInput"  class="pickerlabel" >Longitude</label>
+            </div>
+            <div class="col-8">  
+              <input id="lngInput" />
+            </div>
+          </div>
+         
           <div class="row">
             <div class="col-12">
                 
@@ -310,16 +327,14 @@
           <br>
         </div>
       </div>
-      <div id="chart" >
-  
       
-      </div>
 
  		</div>
  		<div id="map" >
   
 			
 		</div>
+
     
  
  	</div>
@@ -327,7 +342,10 @@
 
  <div style="background-color: #eeeeee;padding: 10px; margin: 10px">
  	
- 
+  <div id="chart" >
+  
+      
+  </div>
  </div>
 
  <h6 style="margin: 10px">autor: nvaldebenito</h6>

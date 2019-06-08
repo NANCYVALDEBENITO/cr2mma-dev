@@ -88,9 +88,10 @@ body {
 
 #map {
   position: relative;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+  width: 2341.25px;
+  height: 100%; 
+  margin-left: 10px;
+  margin-right:10px;
 }
 .map-legend ul {
   list-style: none;
@@ -173,3 +174,5 @@ font-weight: bold;
     text-align: center;
     color:#fff;
 }
+@import "leaflet.awesome-markers";
+

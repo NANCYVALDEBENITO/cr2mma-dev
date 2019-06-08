@@ -13,6 +13,8 @@
 //= require jquery
 //= require geofunction
 //= require plotly
+//= require leaflet
+//= require leaflet.awesome-markers
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

@@ -2,6 +2,8 @@
   "name": "cr2mma-dev",
   "private": true,
   "dependencies": {
+    "leaflet": "^1.5.1",
+    "leaflet-image": "^0.4.0",
     "topojson": "^3.0.2"
   }
 }
