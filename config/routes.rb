@@ -6,9 +6,9 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
 
   }
-  get 'eto/index'
+  root to: 'eto#index'
   #root to: 'eto#index'
-  root to: 'page#index'
+  #root to: 'page#index'
 
 
 
