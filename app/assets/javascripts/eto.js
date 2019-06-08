@@ -43,24 +43,31 @@ $(function(){
         $("#pr_date_start").hide();
         $("#pr_date_end").hide();
     })
+    
 
-    var latlngEvent
+    $("#register3,#register1,#register2,#register4,#register5").click(function() {
+        alert("please sign up for access");
+    });
+
+    
     L.Icon.Default.imagePath = '/assets/'
 
-    var marker = L.marker([-39.457, -69.662]).addTo(map);
+    var marker = L.marker([-45.20000141851692,-72.5999984]).addTo(map);
 
     var updateMarker = function(lat, lng) {
-    marker
-        .setLatLng([lat, lng])
-        .bindPopup("Your location :  " + marker.getLatLng().toString())
-        .openPopup();
-    latlngEvent = marker.getLatLng()
-    return false;
-    };
+        marker
+            .setLatLng([lat, lng])
+            .bindPopup("Your location :  " + marker.getLatLng().toString())
+            .openPopup();
 
+       
+        return false;
+    };
+    
     var updateMarkerByInputs = function() {
         return updateMarker( $('#latInput').val() , $('#lngInput').val());
-        }
+    }
+
     $('#latInput').on('input', updateMarkerByInputs);
     $('#lngInput').on('input', updateMarkerByInputs);
 
@@ -248,11 +255,11 @@ $(function(){
    
 
         document.getElementById('average').addEventListener('click', function () {
-        map.removeControl(legend); 
-        map.eachLayer(function (layer) {
-            map.removeLayer(myGeoJSON)
+        //map.removeControl(legend); 
+        //map.eachLayer(function (layer) {
+        //    map.removeLayer(myGeoJSON)
           
-        });
+        //});
         })
      
         L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -416,15 +423,19 @@ $(function(){
                 $.getJSON(url[e], function (data) {
                     
                     console.log(url[e])
-                    console.log(data)
-                    
+                    //console.log(data)
+                    console.log(parseFloat(lon)-0.1)
                     $.each(data.features, function (key, val) {
                         
                         $.each(val.geometry.coordinates, function(i,j){ 
                             for (f = 0; f < j.length; f++) { 
-                                if (lon == j[f][0]  && lat == j[f][1]){
+                                //console.log(lon)
+                                if ((parseFloat(lon)-0.1<=parseFloat(j[f][0])<=parseFloat(lon)+0.1) && (parseFloat(lat)-0.1<=parseFloat(j[f][1])<=parseFloat(lat)+0.1)){
+                                    console.log("PROCESS ALL")
                                     $.each(j, function(i,j){
-                                        if ( ((lon <= j[0] <= lon +0.1)) && ((lat -0.1<= j[1] <= lat+0.1)) ){
+                                        console.log(j)
+                                        if (parseFloat(lon)-0.1<= parseFloat(j[0])<=0.1+parseFloat(lon) && parseFloat(lat)-0.1 <= parseFloat(j[1])<=parseFloat(lat)+0.1){
+                                            //console.log("PROCESSING")
                                             $.each(val.properties, function(u,v){
                                                 items.push( v );
                                             })
@@ -436,20 +447,15 @@ $(function(){
                         })
                     })
                     data ={}
-                    console.log(data)
+                    //console.log(data)
                 });
-
-                    
-                    
-                    
+                                                          
                 // })
                 chart.push(Geofunction.average(items));
               
-
             }
             console.log(chart)
-            
-            
+                        
             // Set the global configs back to asynchronous 
             $.ajaxSetup({
                 async: true
@@ -470,7 +476,11 @@ $(function(){
             Plotly.newPlot('chart', dataseries, layout);
 
         }
-       //average_chart(-45.20000141851692,-72.5999984 ) 
+        var latlngEvent =  [$('#latInput').val() , $('#lngInput').val()]
+      
+       //average_chart(-45.20000141851692,-72.5999984) //longitude, latitude
+        //console.log(latlngEvent[0])
+        //console.log(latlngEvent[1])
         average_chart(latlngEvent[0], latlngEvent[1])
 
        

@@ -53,6 +53,7 @@ Geofunction={
                  d > min_value  ? '#fde0dd' :
                            '#fff7f3' ;
       },
+     
     
                              
         //$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});

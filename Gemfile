@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+
 gem 'leaflet-rails', '~> 0.7.7'
 #gem 'leaflet-rails', github: 'axyjo/leaflet-rails', ref: '7eab9e5d01faa3fadce0650491c0c911ae36d0b9'
 gem 'leaflet-js'

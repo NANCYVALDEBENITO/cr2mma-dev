@@ -1,5 +1,7 @@
+
 class EtoController < ApplicationController
-  
+  before_action :authenticate_user!
+
   def index
   	@year  = params[:year]
   	@month = params[:month]
@@ -9,5 +11,7 @@ class EtoController < ApplicationController
   	puts @month
   	puts @day
   end
-  
+
+  def search
+  end
 end
