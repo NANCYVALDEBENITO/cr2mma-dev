@@ -1,39 +1,30 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <% if user_signed_in? %>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav navbar-nav">
-         
-          <li><a href="#" ><%= current_user.name %><span class="sr-only"></span></a></li>
-          <li><a href="<%= destroy_user_session_path %>" data-method="DELETE">LOG OUT<span class="sr-only">(current)</span></a></li>
-          <li><a href="<%= root_path%>"> TAREAS</a></li>
-     
-          
-
-         
+          <li><a href="#" ><%= current_user.name %><span class="sr-only navbar-brand"></span></a></li>
+          <li><a href="<%= destroy_user_session_path %>" class="navbar-brand" data-method="DELETE">Log out<span class="sr-only">(current)</span></a></li>
+          <li><a href="#" class="navbar-brand"> Acerca de la plataforma </a></li>
+          <li><a href="#" class="navbar-brand"> Ejemplos de uso </a></li>
+                        
         </ul>
-        
       </div><!-- /.navbar-collapse -->
     <% else %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
         <ul class="nav navbar-nav">
-
-          
-          <li><a href="<%=root_path%>">TAREAS</a></li>
+         
+          <li><a href="#" class="navbar-brand"> Acerca de la plataforma </a></li>
+          <li><a href="#" class="navbar-brand"> Ejemplos de uso </a></li>
         </ul>
       </div>
     <% end %>
-  </div><!-- /.container-fluid -->
+    <div style="text-align: center;" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <br>
+      <h1 style="font-size: 24px; text-align: center; "> <%= image_tag("cr2.png", :alt => "Logo Plataforma de visualización cr2") %>
+       PLATAFORMA DE VISUALIZACIÓN</h1>
+    </div>
 </nav>
