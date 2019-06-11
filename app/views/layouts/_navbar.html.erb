@@ -1,30 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <% if user_signed_in? %>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav">
-          <li><a href="#" ><%= current_user.name %><span class="sr-only navbar-brand"></span></a></li>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li><a class="navbar-brand" href="<%= edit_user_registration_path %>"><%= current_user.name %><span class="sr-only navbar-brand"></span></a></li>
           <li><a href="<%= destroy_user_session_path %>" class="navbar-brand" data-method="DELETE">Log out<span class="sr-only">(current)</span></a></li>
-          <li><a href="#" class="navbar-brand"> Acerca de la plataforma </a></li>
-          <li><a href="#" class="navbar-brand"> Ejemplos de uso </a></li>
+          <li><a href="<%= eto_about_path %>" class="navbar-brand"> Acerca de la plataforma </a></li>
+          <li><a href="<%= eto_example_path %>" class="navbar-brand"> Ejemplos de uso </a></li>
+          <li><a href="<%= root_path %>" class="navbar-brand"> Ir a la plataforma </a></li>
                         
         </ul>
       </div><!-- /.navbar-collapse -->
     <% else %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
          
-          <li><a href="#" class="navbar-brand"> Acerca de la plataforma </a></li>
-          <li><a href="#" class="navbar-brand"> Ejemplos de uso </a></li>
+          <li><a href="<%= eto_about_path %>" class="navbar-brand"> Acerca de la plataforma </a></li>
+          <li><a href="<%= eto_example_path %>" class="navbar-brand"> Ejemplos de uso </a></li>
+  
         </ul>
       </div>
     <% end %>
-    <div style="text-align: center;" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <br>
-      <h1 style="font-size: 24px; text-align: center; "> <%= image_tag("cr2.png", :alt => "Logo Plataforma de visualización cr2") %>
+      <h1 style="font-size: 24px; text-align: left; "> <%= image_tag("cr2.png", :alt => "Logo Plataforma de visualización cr2") %>
        PLATAFORMA DE VISUALIZACIÓN</h1>
     </div>
 </nav>

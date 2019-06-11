@@ -1,9 +1,9 @@
 
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
+$(document).on('turbolinks:load', function() {
 
-// Draw map
-$(function(){
+  $(function(){
     var map = L.map( document.getElementById('map'), {
             center: [-39.457, -69.662],
             minZoom: 2,
@@ -125,8 +125,8 @@ $(function(){
         
 
         var data = $.ajax({
-        	url: url,
-        	dataType: "json",
+            url: url,
+            dataType: "json",
             success: console.log("County data successfully loaded."),
             error: function(xhr) {
                 alert(xhr.statusText)
@@ -561,3 +561,7 @@ $(function(){
     })
 
 });
+
+
+});
+// Draw map

@@ -15,8 +15,8 @@
 //= require plotly
 //= require leaflet
 //= require leaflet.awesome-markers
+//= require eto
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree
 //= require box
