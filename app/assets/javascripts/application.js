@@ -13,6 +13,7 @@
 //= require jquery
 //= require geofunction
 //= require plotly
+//= require leaflet.export
 //= require leaflet
 //= require leaflet.awesome-markers
 //= require eto
