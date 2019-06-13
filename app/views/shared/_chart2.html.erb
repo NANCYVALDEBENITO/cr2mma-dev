@@ -1,15 +1,8 @@
-
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 <%= javascript_include_tag "active_admin", "chartkick" %>
 
-
-<% my_chart = User.group_by_day(:created_at).count %>
-<%= area_chart my_chart %>
-
-<%= geo_chart User.group(:country).count %>
-
 <% 	my_chart = User.group(:city).count %>
-<%= pie_chart my_chart %>
-<
+<%= pie_chart my_chart, download: {filename: "coutry_users"}  %>
+
 <% my_chart = User.group(:country).count %>
-<%= pie_chart my_chart %>
+<%= pie_chart my_chart, download: {filename: "city_users"} %>

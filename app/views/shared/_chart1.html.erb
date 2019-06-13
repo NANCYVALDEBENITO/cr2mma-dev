@@ -1,0 +1,8 @@
+
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<%= javascript_include_tag "active_admin", "chartkick" %>
+
+
+<% my_chart = User.group_by_day(:created_at).count %>
+<%= area_chart my_chart, download: {filename: "users_registration"}  %>
+

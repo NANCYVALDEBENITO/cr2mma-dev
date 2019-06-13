@@ -16,21 +16,34 @@ ActiveAdmin.register User do
 	#print @users
 
 	index do
-
+	 
 	 column :id
 	 column :name
 	 column :email
 	 column :country
 	 column :city
 	 column :created_at
-
-	 panel "Gráfico" do
-      render partial: 'shared/chart'
-     end
+	 div class: "row" do
+		 div class: "col-12" do
+			 panel "Usuarios registrados" do
+		      render partial: 'shared/chart1'
+		     end
+		  end
+ 	 end
+ 	 div class: "row" do
+		 div class: "col-6" do
+			 panel "Distribución local de usuarios" do
+			  render partial: 'shared/chart2'
+			 end
+		 end
+		 div class: "col-6" do
+		     panel "Mapeo de usuarios en el mundo" do
+		      render partial: 'shared/chart3'
+		     end
+		 end
+	 end
 
 	
 	end
 
-
-	
 end
