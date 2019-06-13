@@ -1,4 +1,15 @@
-<%= javascript_include_tag "application", "chartkick" %>
-<%= javascript_include_tag "http://www.google.com/jsapi" %>
-<% my_chart = {"ejemplo1":20, "ejemplo2":30 } %>
-<%= bar_chart my_chart %>
+
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<%= javascript_include_tag "active_admin", "chartkick" %>
+
+
+<% my_chart = User.group_by_day(:created_at).count %>
+<%= area_chart my_chart %>
+
+<%= geo_chart User.group(:country).count %>
+
+<% 	my_chart = User.group(:city).count %>
+<%= pie_chart my_chart %>
+<
+<% my_chart = User.group(:country).count %>
+<%= pie_chart my_chart %>

@@ -16,6 +16,7 @@ ActiveAdmin.register User do
 	#print @users
 
 	index do
+
 	 column :id
 	 column :name
 	 column :email
@@ -23,9 +24,9 @@ ActiveAdmin.register User do
 	 column :city
 	 column :created_at
 
-	panel "Gráfico" do
+	 panel "Gráfico" do
       render partial: 'shared/chart'
-    end
+     end
 
 	
 	end
