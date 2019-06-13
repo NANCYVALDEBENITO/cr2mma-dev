@@ -11,20 +11,25 @@
 	<br>
 	<ul>
 		<li><h5>Descargar el mapa en formato geojson</h5></li>
+		<p>Puedes descargar los contornos del mapa utilizando el botón descargar. Se debe iniciar la descarga automáticamente,
+		puedes visualizar este tipo de archivos con algún software, como Qgis u otro. En esta versión sólo se puede descargar
+		en este formato, en un futuro se pretende agregar más opciones de descarga. </p>
 		<%= image_tag("download-chrome.png",  size: "1200x100", :alt => "descargar mapa usando chrome",  :class =>"img-fluid") %>
 	</ul>
 	<br>
 	<ul>
 		<li><h5>¿Problemas para descargar el mapa?</h5></li>
 		<p> Si no puedes descargar el archivo usando Chrome, utiliza Mozilla Firefox para descargar archivos más pesados.
-		Esto ocurre debido a la cantidad de datos y qué tamaño tiene el archivo.</p>
+		Esto ocurre debido a la cantidad de datos y el tamaño del archivo. En Mozilla Firefox, se abrirá una ventana
+		como se muestra en la imagen.</p>
 		<%= image_tag("download-firefox.png",  size: "1200x100", :alt => "descargar mapa usando firefox",  :class =>"img-fluid") %>
 	</ul>
 	<br>
 	<ul>
 		<li><h5>Crear un gráfico temporal de un punto específico </h5></li>
 		<p>Esta opción esta disponible, solo para datos mensuales, y limitado sobre un año específico.
-		Por lo tanto, puedes obtener datos mensuales de un año.</p>
+		Por lo tanto, puedes obtener datos mensuales de un año. En una próxima versión se espera poder obtener una serie temporal no acotada. Esta serie temporal se puede copiar los datos en una tabla excel, o descargar el gráfico como una imagen en formato png. Solo debes registrarte en <a href="https://plot.ly/online-chart-maker/">Ploty Chart Studio</a> y puedes optar a estar opciones 
+		de forma gratuita.</p>
 		<%= image_tag("chart.png",  size: "1200x100", :alt => "gráfico de precipitación sobre una coordenada",  :class =>"img-fluid")%>
 	</ul>
 </div>

@@ -9,8 +9,11 @@
 
 
 User.create!([
-  {email: "testadmin@mvmanor.co.uk", password: "testadminuser", password_confirmation: "testadminuser",  created_at: "2019-02-06 14:02:10", updated_at: "2015-02-06 14:02:10", name: "Santiago", city: "Santiago", country: "Chile"},
-  {email: "testuser@mvmanor.co.uk", password: "testuseraccount", password_confirmation: "testuseraccount",  created_at: "2019-02-06 14:03:01", updated_at: "2019-02-06 14:03:01", name: "Miguel", city: "Moscu", country: "Russia"},
-  {email: "testcustomer@customer.co.uk", password: "testcustomeruser", password_confirmation: "testcustomeruser", created_at: "2019-05-06 14:03:44", updated_at: "2019-05-06 14:03:44", name: "Fernanda", city: "Tokio", country: "Japan"}
+  {email: "usernewadmin@gmail.com", password: "usernewadminuser", password_confirmation: "usernewadminuser",  created_at: "2019-05-06 14:02:10", updated_at: "2015-05-06 14:02:10", name: "Alicia", city: "Canberra", country: "Australia", area:"hidrología"},
+  {email: "usernewuser@gmail.com", password: "usernewuseraccount", password_confirmation: "usernewuseraccount",  created_at: "2019-03-06 14:03:01", updated_at: "2019-03-06 14:03:01", name: "Antonia", city: "Roma", country: "Italy", area:"energía solar"},
+  {email: "usernewcustomer@gmail.com", password: "usernewcustomeruser", password_confirmation: "usernewcustomeruser", created_at: "2019-05-06 14:03:44", updated_at: "2019-05-06 14:03:44", name: "Barbara", city: "Tokyo", country: "Japan", area:"construcción"},
+  {email: "usernew@mvmanor.com", password: "newadminuser", password_confirmation: "newadminuser",  created_at: "2019-01-06 14:02:10", updated_at: "2015-01-06 14:02:10", name: "Santiago", city: "Belen", country: "Chile",area:"servicios sanitarios"},
+  {email: "newuser@mvmanor.com", password: "usernewuser", password_confirmation: "usernewuser",  created_at: "2019-04-06 14:03:01", updated_at: "2019-04-06 14:03:01", name: "Miguel", city: "Berlin", country: "Germany", area:"minería"},
+  {email: "newcustomer@customer.com", password: "usernewcustomer", password_confirmation: "usernewcustomer", created_at: "2019-04-06 14:03:44", updated_at: "2019-04-06 14:03:44", name: "Claudio", city: "Tokyo", country: "Japan",area:"hidrología"}
 
 ])
