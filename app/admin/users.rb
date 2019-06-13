@@ -22,6 +22,7 @@ ActiveAdmin.register User do
 	 column :email
 	 column :country
 	 column :city
+	 column :area
 	 column :created_at
 	 div class: "row" do
 		 div class: "col-12" do
@@ -41,6 +42,9 @@ ActiveAdmin.register User do
 		      render partial: 'shared/chart3'
 		     end
 		 end
+	 end
+	 panel "Áreas donde se utilizan los datos" do
+		render partial: 'shared/chart4'
 	 end
 
 	
