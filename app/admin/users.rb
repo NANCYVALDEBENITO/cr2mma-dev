@@ -11,11 +11,25 @@ ActiveAdmin.register User do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-	
+
+	#@users = User.all
+	#print @users
+
 	index do
 	 column :id
+	 column :name
 	 column :email
+	 column :country
+	 column :city
 	 column :created_at
+
+	panel "Gráfico" do
+      render partial: 'shared/chart'
+    end
+
+	
 	end
 
+
+	
 end

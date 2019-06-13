@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
 
   }
-
+  #resources :users
 
   root to: 'eto#index'
   #root to: 'eto#index'

@@ -11,9 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require Chart.bundle
+//= require chartkick
 //= require geofunction
 //= require plotly
-//= require leaflet.export
 //= require leaflet
 //= require leaflet.awesome-markers
 //= require eto

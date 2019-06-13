@@ -430,11 +430,11 @@ $(document).on('turbolinks:load', function() {
                         $.each(val.geometry.coordinates, function(i,j){ 
                             for (f = 0; f < j.length; f++) { 
                                 //console.log(lon)
-                                if ((parseFloat(lon)-0.1<=parseFloat(j[f][0])<=parseFloat(lon)+0.1) && (parseFloat(lat)-0.1<=parseFloat(j[f][1])<=parseFloat(lat)+0.1)){
+                                if (j[f][0]==lon && j[f][1]==lat){
                                     console.log("PROCESS ALL")
                                     $.each(j, function(i,j){
                                         console.log(j)
-                                        if (parseFloat(lon)-0.1<= parseFloat(j[0])<=0.1+parseFloat(lon) && parseFloat(lat)-0.1 <= parseFloat(j[1])<=parseFloat(lat)+0.1){
+                                        if ( lon==j[0] && lat== j[1]){
                                             //console.log("PROCESSING")
                                             $.each(val.properties, function(u,v){
                                                 items.push( v );
@@ -476,12 +476,12 @@ $(document).on('turbolinks:load', function() {
             Plotly.newPlot('chart', dataseries, layout);
 
         }
-        var latlngEvent =  [$('#latInput').val() , $('#lngInput').val()]
+        //var latlngEvent =  [$('#latInput').val() , $('#lngInput').val()]
       
-       //average_chart(-45.20000141851692,-72.5999984) //longitude, latitude
+        average_chart(-45.20000141851692,-72.5999984) //longitude, latitude
         //console.log(latlngEvent[0])
         //console.log(latlngEvent[1])
-        average_chart(latlngEvent[0], latlngEvent[1])
+        //average_chart(latlngEvent[0], latlngEvent[1])
 
        
 

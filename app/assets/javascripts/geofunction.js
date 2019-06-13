@@ -12,13 +12,7 @@ Geofunction={
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
     },
-    downloadjpg: function downloadjpg(exportObj){
-      export('image/jpg');
-      afterExport(dataURL) {
-        operators...;
-        return dataURL;
-      }
-    },
+    
 
     getMax: function getMaxOfArray(numArray){
     	return Math.max.apply(null, numArray);
