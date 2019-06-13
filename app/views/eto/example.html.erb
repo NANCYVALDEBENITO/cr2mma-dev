@@ -1,0 +1,28 @@
+<h2>Ejemplos de uso</h2>
+
+<ul>
+	<li><h5>Generar un mapa de contornos</h5></li>
+	<p>Selecciona la variable que quieres ver sobre el mapa y la fecha, en este caso, para precipitación se tienen 
+	datos mensuales, y para evapotranspiración datos diarios. Si tienes dudas con respecto al espacio temporal disponible,
+	puedes localizar tu mouse sobre el signo de pregunta, este icono te entregará la información necesaria. </p>
+	<%= image_tag("map.png",  size: "100x100", :alt => "mapa evapotranspiración") %>
+</ul>
+<ul>
+	<li><h5>Descargar el mapa en formato geojson</h5></li>
+	<%= image_tag("download-chrome.png", :alt => "descargar mapa usando chrome") %>
+</ul>
+<ul>
+	<li><h5>¿Problemas para descargar el mapa?</h5></li>
+	<p> Si no puedes descargar el archivo usando Chrome, utiliza Mozilla Firefox para descargar archivos más pesados.
+	Esto ocurre debido a la cantidad de datos y qué tamaño tiene el archivo.</p>
+	<%= image_tag("download-firefox.png", heigth: 1800, :alt => "descargar mapa usando firefox") %>
+</ul>
+<ul>
+	<li><h5>Crear un gráfico temporal de un punto específico </h5></li>
+	<p>Esta opción esta disponible, solo para datos mensuales, y limitado sobre un año específico.
+	Por lo tanto, puedes obtener datos mensuales de un año.</p>
+	<%= image_tag("chart.png", :alt => "gráfico de precipitación sobre una coordenada") %>
+</ul>
+
+
+
