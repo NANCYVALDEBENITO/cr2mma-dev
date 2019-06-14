@@ -17,6 +17,8 @@ $(document).on('turbolinks:load', function() {
     $("#pr_date").hide();
     $("#pr_date_start").hide();
     $("#pr_date_end").hide();
+    $("#pr_period_map").hide();
+    $("#pr_period_chart").hide();
 
     $("#pr").on('click', function () {
         $("#eto").removeClass('active');
@@ -25,10 +27,14 @@ $(document).on('turbolinks:load', function() {
         $("#eto_date").hide();
         $("#eto_date_start").hide();
         $("#eto_date_end").hide();
+        $("#eto_period_map").hide();
+        $("#eto_period_chart").hide();
 
         $("#pr_date").show();
         $("#pr_date_start").show();
         $("#pr_date_end").show();
+        $("#pr_period_map").show();
+        $("#pr_period_chart").show();
 
     })
     $("#eto").on('click', function () {
@@ -38,10 +44,14 @@ $(document).on('turbolinks:load', function() {
         $("#eto_date").show();
         $("#eto_date_start").show();
         $("#eto_date_end").show();
+        $("#eto_period_map").show();
+        $("#eto_period_chart").show();
 
         $("#pr_date").hide();
         $("#pr_date_start").hide();
         $("#pr_date_end").hide();
+        $("#pr_period_map").hide();
+        $("#pr_period_chart").show();
     })
     
 
@@ -202,10 +212,17 @@ $(document).on('turbolinks:load', function() {
 
             // loop through our density intervals and generate a label with a colored square for each interval
             for (var i = 0; i < grades.length; i++) {
+                if ($("#pr").hasClass('active')){
                 div.innerHTML +=
+
+                    '<i style="background:' + Geofunction.getColor2(grades[i] + 1, min, max) + '"></i> '+
+                    grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>':'+');
+                }else{
+                 div.innerHTML +=
 
                     '<i style="background:' + Geofunction.getColor(grades[i] + 1, min, max) + '"></i> '+
                     grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>':'+');
+                }
             }
 
             return div;
@@ -214,14 +231,26 @@ $(document).on('turbolinks:load', function() {
         legend.addTo(map);
         
         function style(feature) {
+             if ($("#pr").hasClass('active')){
+            return {
+                fillColor: Geofunction.getColor2(feature.properties.n, min, max),
+                weight:0.2,
+                opacity: 5,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.8
+            }
+            }else{
             return {
                 fillColor: Geofunction.getColor(feature.properties.n, min, max),
-                weight: 2,
+                weight: 0.2,
                 opacity: 5,
                 color: 'white',
                 dashArray: '3',
                 fillOpacity: 1
             };
+            }
+
         }
         var myGeoJSON;
         $.ajaxSetup({

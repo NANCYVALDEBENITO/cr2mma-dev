@@ -54,6 +54,40 @@ Geofunction={
                  d > min_value  ? '#fde0dd' :
                            '#fff7f3' ;
       },
+      getColor2: function getColor(d, min_value, max_value){
+
+          value = max_value - min_value;
+          diff  = value/8;
+
+          
+          return d > max_value ? '#f7fcfd' :
+                 d > min_value+6*diff ? '#e5f5f9' :
+                 d > min_value+5*diff  ? '#ccece6' :
+                 d > min_value+4*diff  ? '#99d8c9' :
+                 d > min_value+3*diff ? '#66c2a4' :
+                 d > min_value+2*diff  ? '#41ae76' :
+                 d > min_value+diff  ? '#238b45' :
+                 d > min_value  ? '#006d2c' :
+                           '#00441b' ;
+      },
+      // getColor2: function getColor(d, min_value, max_value){
+
+      //     value = max_value - min_value;
+      //     diff  = value/8;
+
+          
+      //     return d > max_value ? '#00441b' :
+      //            d > min_value+6*diff ? '#006d2c' :
+      //            d > min_value+5*diff  ? '#238b45' :
+      //            d > min_value+4*diff  ? '#66c2a4' :
+      //            d > min_value+3*diff ? '#99d8c9' :
+      //            d > min_value+2*diff  ? '#41ae76' :
+      //            d > min_value+diff  ? '#ccece6' :
+      //            d > min_value  ? '#e5f5f9' :
+      //                      '#f7fcfd' ;
+      // },
+
+
      
     
                              

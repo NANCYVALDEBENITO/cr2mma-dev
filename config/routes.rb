@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   root to: 'eto#index'
   #root to: 'eto#index'
   #root to: 'page#index'
-  get 'eto/about'
-  get 'eto/example'
+  get 'about/about'
+  get 'about/example'
 
 
 
