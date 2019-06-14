@@ -51,7 +51,7 @@ $(document).on('turbolinks:load', function() {
         $("#pr_date_start").hide();
         $("#pr_date_end").hide();
         $("#pr_period_map").hide();
-        $("#pr_period_chart").show();
+        $("#pr_period_chart").hide();
     })
     
 
@@ -60,7 +60,7 @@ $(document).on('turbolinks:load', function() {
     });
 
     
-    L.Icon.Default.imagePath = '/assets/'
+    L.Icon.Default.imagePath = '/'
 
     var marker = L.marker([-45.20000141851692,-72.5999984]).addTo(map);
 
