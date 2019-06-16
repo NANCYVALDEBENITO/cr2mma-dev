@@ -148,10 +148,14 @@ $(document).on('turbolinks:load', function() {
             if ($("#geojson").hasClass('active')){
                 Geofunction.download(data.responseJSON, variable)
                 console.log(data.responseJSON)
+                
+
             }
             $("#geojson").removeClass('active');
+            
 
         })
+
 
 
         // Set the global configs to synchronous 
@@ -262,6 +266,7 @@ $(document).on('turbolinks:load', function() {
 
     
             myGeoJSON = L.geoJSON(data.responseJSON, {style: style }).addTo(map);
+            
             //for changing latitudes to remap 
              console.log(myGeoJSON._layers)
 
