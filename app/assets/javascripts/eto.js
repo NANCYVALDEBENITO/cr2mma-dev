@@ -485,7 +485,7 @@ $(document).on('turbolinks:load', function() {
               }
             ];
             var layout = {
-              title: variable
+              title: variable +"   Latitude: "+ String(lat)+ "° Longitude: "+String(lon)+"°"
             }
             console.log(variable)
             Plotly.newPlot('chart', dataseries, layout);
