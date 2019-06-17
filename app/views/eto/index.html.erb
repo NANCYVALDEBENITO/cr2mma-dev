@@ -1,320 +1,311 @@
 <div class="container_v">
  	<div class="page_body container_h">
- 		<div>
- 		
- 			<div style="display: flex; align-items:stretch; background-color: #f9f9f9; padding-right: 0px; border: solid 1px gray;border-radius: 5px; max-width: 700px;">
-        <div style="min-width: 250px;margin:0px 10px;  max-width: 700px;">
-          <div class="row">
-          	<div class="col-12">
-          		<div class="pickerlabel_title"> VARIABLES
-                <div class="tool-tip">
-                <span class="tool-tip__icon_1" title="Variables disponibles">?</span>
-              
-            		</div>
-              </div>
-          	</div>
-            <div class="col-12">
-              <label class="pickerlabel"> Selecciona la variable </label>
-              <div class="btn-group btn-block" style="margin-top: 5px;">
-              	<button id="pr" type="button" class="btn btn-outline-info" style="width:50%;">PRECIPITACIÓN</button>
-              	<button id="eto"  type="button" class="btn btn-outline-info active" style="width:50%;" >EVAPOTRANSPIRACIÓN</button>
-             
-         
+		<div class="menu">
+      <div class="config">
+        <div class= "row">
+        	<div class="col-12">
+        		<div class="pickerlabel_title"> VARIABLES
+              <div class="tool-tip">
+              <span class="tool-tip__icon_1" title="Variables disponibles">?</span>
+            
           		</div>
-
-          	</div>
-            <div class="col-12">
-          		<div class="pickerlabel_title" id="eto_period_map" > PERIODO
-                    <div class="tool-tip">
-                    <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa%  1980">?</span>
-                  
-                	</div>
-            	</div>
-              <div class="pickerlabel_title" id="pr_period_map"> PERIODO
-                    <div class="tool-tip">
-                    <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% desde 1981 a 2016 ">?</span>
-                  
-                  </div>
-              </div>
-
-        		</div>
-          	<div class="col-12" >
-                 
-              <div class="pickerlabel" id="eto_date"> Ingresa la fecha del archivo a visualizar
-                
-                  
-                <div class="btn-group btn-block"  style="margin-top: 5px;">
-                	<table style="width: 20px;">
-                		<tbody style="width: 20px;">
-                			
-                    	<form accept-charset="UTF-8" action="/first/save" method="post">
-                    		<tr>
-                  				<td><label for="day-eto" class="pickerlabel"> día </label></td>
-                  				<td><label for="month-eto" class="pickerlabel"> mes </label></td>
-                  				<td><label for="year-eto" class="pickerlabel"> año </label></td>
-                      		
-                      	</tr>
-                      	<tr>
-					 								<td><input size="2" name="" id= "day-eto" value=<%="01"%> style="width: 40px;"></td>
-                      		<td><input type="2" name="" id="month-eto" value=<%="01"%> style="width: 40px;"></td>
-                      		<td><input type="4" name="" id="year-eto" value=<%="1980"%> style="width: 50px;"></td>
-				
-                        </tr>
-                      </form>
-                    
-                  	</tbody>
-                  </table>                   	 
-          			</div>
-	            </div>
-	                 	
-              <div class="pickerlabel" id="pr_date"> Ingresa la fecha del archivo a visualizar
-               
-        	
-                <div class="btn-group btn-block" style="margin-top: 5px;">
-                	<table style="width: 20px;">
-                		<tbody style="width: 20px;">
-                			
-                    	<form accept-charset="UTF-8" action="/first/save" method="post">
-                    		<tr>
-                  				
-                  				<td><label for="month-pr" class="pickerlabel"> mes </label></td>
-                  				<td><label for="year-pr" class="pickerlabel"> año </label></td>
-                      		
-                      	</tr>
-                      	<tr>
-
-                      		<td><input type="2" name="" id="month-pr" value=<%="01"%> style="width: 40px;"></td>
-                      		<td><input type="4" name="" id="year-pr" value=<%="1981"%> style="width: 50px;"></td>
-				
-                        </tr>
-                      </form>
-                    
-                  	</tbody>
-                 	</table>
-            		</div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                    
-                  <div class="btn-group btn-block"style="margin-top: 5px;">
-                  	<div class="btn-group btn-block"  style="margin-top: 5px;">
-                        	<button id="restart" type="button" class="btn btn-outline-info " style="width:20%;" >CARGAR</button>
-                        	                             
-                   
-             				</div>
-	            		</div>
-                </div>
-	            </div>
-              <div class="row">
-            		<div class="col-12">
-              		<div class="pickerlabel_title"> DESCARGA EL ARCHIVO
-                    <div class="tool-tip">
-                    <span class="tool-tip__icon_1" title="Si tienes problemas para descargar prueba con otro navegador como Mozilla Firefox">?</span>
-                  
-                    </div>
-                  </div>
-              	</div>
-                <div class="col-12">
-                  <label class="pickerlabel"> Descargar como geojson </label>
-                  <div class="btn-group btn-block" style="margin-top: 5px;">
-                    	<button id="geojson" type="button" class="btn btn-outline-info " style="width:20%;">DOWNLOAD</button>
-                 
-              		</div>
-            		</div>
-
-              </div>
             </div>
-
-          </div>
-        
-      		<div class="pickerlabel_title" id="eto_period_chart"> PERIODO A GRAFICAR
-                <div class="tool-tip">
-                <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% 1980">?</span>
-              
-            	</div>
         	</div>
-          <div class="pickerlabel_title" id="pr_period_chart"> PERIODO A GRAFICAR
-                <div class="tool-tip">
-                <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% desde 1981 a 1982">?</span>
-              
-              </div>
-          </div>
-
-      		
-        
-                 
-          <div class="pickerlabel" id="eto_date_start"> Fecha de inicio
-            
-      	
-              
-            <div class="btn-group btn-block"  style="margin-top: 5px;">
-            	<table style="width: 20px;">
-            		<tbody style="width: 20px;">
-            			
-                	<form accept-charset="UTF-8" action="/first/save" method="post">
-                		<tr>
-              				<td><label for="day-eto-start" class="pickerlabel"> día </label></td>
-              				<td><label for="month-eto-start" class="pickerlabel"> mes </label></td>
-              				<td><label for="year-eto-start" class="pickerlabel"> año </label></td>
-                  		
-                  	</tr>
-                  	<tr>
-			 								<td><input size="2" name="" id= "day-eto-start" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="2" name="" id="month-eto-start" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="4" name="" id="year-eto-start" value=<%="1980"%> style="width: 50px;"></td>
-		
-                    </tr>
-                  </form>
-                
-              	</tbody>
-              </table>                   	 
-      			</div>
-          </div>
-                 	
-          <div class="pickerlabel" id="eto_date_end"> Fecha de termino
-            
-      	
-              
-            <div class="btn-group btn-block"  style="margin-top: 5px;">
-            	<table style="width: 20px;">
-            		<tbody style="width: 20px;">
-            			
-                	<form accept-charset="UTF-8" action="/first/save" method="post">
-                		<tr>
-              				<td><label for="day-eto-end" class="pickerlabel"> día </label></td>
-              				<td><label for="month-eto-end" class="pickerlabel"> mes </label></td>
-              				<td><label for="year-eto-end" class="pickerlabel"> año </label></td>
-                  		
-                  	</tr>
-                  	<tr>
-			 								<td><input size="2" name="" id= "day-eto-end" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="2" name="" id="month-eto-end" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="4" name="" id="year-eto-end" value=<%="1980"%> style="width: 50px;"></td>
-		
-                    </tr>
-                  </form>
-                
-              	</tbody>
-              </table>                   	 
-      			</div>
-          </div>
-                         
-          <div class="pickerlabel" id="pr_date_start"> Fecha de inicio
-            
-    	
+          <div class="col-12">
+            <label class="pickerlabel"> Selecciona la variable </label>
             <div class="btn-group btn-block" style="margin-top: 5px;">
-            	<table style="width: 20px;">
-            		<tbody style="width: 20px;">
-            			
-                	<form accept-charset="UTF-8" action="/first/save" method="post">
-                		<tr>
-              				
-              				<td><label for="month-pr-start" class="pickerlabel"> mes </label></td>
-              				<td><label for="year-pr-start" class="pickerlabel"> año </label></td>
-                  		
-                  	</tr>
-                  	<tr>
-
-                  		<td><input type="2" name="" id="month-pr-start" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="4" name="" id="year-pr-start" value=<%="1981"%> style="width: 50px;"></td>
-		
-                    </tr>
-                  </form>
-                
-              	</tbody>
-             	</table>
+            	<button id="pr" type="button" class="btn btn-outline-info button_size" style="width:50%;">PRECIPITACIÓN</button>
+            	<button id="eto"  type="button" class="btn btn-outline-info active button_size" style="width:50%;" >EVAPOTRANSPIRACIÓN</button>
+           
+       
         		</div>
-          </div>
-               	
-          <div class="pickerlabel" id="pr_date_end"> Fecha de termino
-            
-    	
-            <div class="btn-group btn-block" style="margin-top: 5px;">
-            	<table style="width: 20px;">
-            		<tbody style="width: 20px;">
-            			
-                	<form accept-charset="UTF-8" action="/first/save" method="post">
-                		<tr>
-              				
-              				<td><label for="month-pr-end" class="pickerlabel"> mes </label></td>
-              				<td><label for="year-pr-end" class="pickerlabel"> año </label></td>
-                  		
-                  	</tr>
-                  	<tr>
 
-                  		<td><input type="2" name="" id="month-pr-end" value=<%="01"%> style="width: 40px;"></td>
-                  		<td><input type="4" name="" id="year-pr-end" value=<%="1981"%> style="width: 50px;"></td>
-		
-                    </tr>
-                  </form>
+        	</div>
+          <div class="col-12">
+        		<div class="pickerlabel_title" id="eto_period_map" > PERIODO
+                  <div class="tool-tip">
+                  <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa%  1980">?</span>
                 
-              	</tbody>
-             	</table>
-        		</div>
-          </div>
-          <div class = "row">
-            <div class="col-12">
-             <div class="pickerlabel_title"> COORDENADAS
-                <div class="tool-tip">
-                <span class="tool-tip__icon_1" title="Ingresa las coordenadas manualmente o puedes interactuar con el mapa haciendo click">?</span>
-              
+              	</div>
+          	</div>
+            <div class="pickerlabel_title" id="pr_period_map"> PERIODO
+                  <div class="tool-tip">
+                  <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% desde 1981 a 2016 ">?</span>
+                
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-                
-              <label for="latInput" class="pickerlabel">Latitude</label>
-            </div>
-            <div class="col-8">
-              <input id="latInput"/>
-            </div>
-          </div>
-            
-          <div class = "row">
-            <div class="col-4">
-                
-              <label for="lngInput"  class="pickerlabel" >Longitude</label>
-            </div>
-            <div class="col-8">  
-              <input id="lngInput" />
-            </div>
-          </div>
-         
-          <div class="row">
-            <div class="col-12">
-                
-              <div class="btn-group btn-block"style="margin-top: 5px;">
-              	<div class="btn-group btn-block"  style="margin-top: 5px;">
-                    	<button id="average" type="button" class="btn btn-outline-info " style="width:20%;" >GRAFICAR PROMEDIO</button>
-                    	                             
+
+      		</div>
+        	<div class="col-12" >
                
-         				</div>
+            <div class="pickerlabel" id="eto_date"> Ingresa la fecha del archivo a visualizar
+              
+                
+              <div class="btn-group btn-block"  style="margin-top: 5px;">
+              	<table style="width: 20px;">
+              		<tbody style="width: 20px;">
+              			
+                  	<form accept-charset="UTF-8" action="/first/save" method="post">
+                  		<tr>
+                				<td><label for="day-eto" class="pickerlabel"> día </label></td>
+                				<td><label for="month-eto" class="pickerlabel"> mes </label></td>
+                				<td><label for="year-eto" class="pickerlabel"> año </label></td>
+                    		
+                    	</tr>
+                    	<tr>
+				 								<td><input size="2" name="" id= "day-eto" value=<%="01"%> style="width: 40px;"></td>
+                    		<td><input type="2" name="" id="month-eto" value=<%="01"%> style="width: 40px;"></td>
+                    		<td><input type="4" name="" id="year-eto" value=<%="1980"%> style="width: 50px;"></td>
+			
+                      </tr>
+                    </form>
+                  
+                	</tbody>
+                </table>                   	 
+        			</div>
+            </div>
+                 	
+            <div class="pickerlabel" id="pr_date"> Ingresa la fecha del archivo a visualizar
+             
+      	
+              <div class="btn-group btn-block" style="margin-top: 5px;">
+              	<table style="width: 20px;">
+              		<tbody style="width: 20px;">
+              			
+                  	<form accept-charset="UTF-8" action="/first/save" method="post">
+                  		<tr>
+                				
+                				<td><label for="month-pr" class="pickerlabel"> mes </label></td>
+                				<td><label for="year-pr" class="pickerlabel"> año </label></td>
+                    		
+                    	</tr>
+                    	<tr>
+
+                    		<td><input type="2" name="" id="month-pr" value=<%="01"%> style="width: 40px;"></td>
+                    		<td><input type="4" name="" id="year-pr" value=<%="1981"%> style="width: 50px;"></td>
+			
+                      </tr>
+                    </form>
+                  
+                	</tbody>
+               	</table>
           		</div>
             </div>
+
+            <div class="row">
+              <div class="col-12">
+                  
+                <div class="btn-group btn-block"style="margin-top: 5px;">
+                	<div class="btn-group btn-block"  style="margin-top: 5px;">
+                      	<button id="restart" type="button" class="btn btn-outline-info button_size" style="width:20%;" >CARGAR</button>
+                      	                             
+                 
+           				</div>
+            		</div>
+              </div>
+            </div>
+            <div class="row">
+          		<div class="col-12">
+            		<div class="pickerlabel_title "> DESCARGA EL ARCHIVO
+                  <div class="tool-tip">
+                  <span class="tool-tip__icon_1" title="Si tienes problemas para descargar prueba con otro navegador como Mozilla Firefox">?</span>
+                
+                  </div>
+                </div>
+            	</div>
+              <div class="col-12">
+                <label class="pickerlabel"> Descargar como geojson </label>
+                <div class="btn-group btn-block" style="margin-top: 5px;">
+                  	<button id="geojson" type="button" class="btn btn-outline-info button_size" style="width:20%;">DOWNLOAD</button>
+               
+            		</div>
+          		</div>
+
+            </div>
           </div>
-          
 
-
-
-          <br>
         </div>
-      </div>
       
+    		<div class="pickerlabel_title" id="eto_period_chart"> PERIODO A GRAFICAR
+              <div class="tool-tip">
+              <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% 1980">?</span>
+            
+          	</div>
+      	</div>
+        <div class="pickerlabel_title" id="pr_period_chart"> PERIODO A GRAFICAR
+              <div class="tool-tip">
+              <span class="tool-tip__icon_1" title="Selecciona ĺa fecha que deseas ver dd%mm%aaaa% desde 1981 a 1982">?</span>
+            
+            </div>
+        </div>
 
- 		</div>
-    
- 		<div id="map" >
+    		
+      
+               
+        <div class="pickerlabel" id="eto_date_start"> Fecha de inicio
+          
+    	
+            
+          <div class="btn-group btn-block"  style="margin-top: 5px;">
+          	<table style="width: 20px;">
+          		<tbody style="width: 20px;">
+          			
+              	<form accept-charset="UTF-8" action="/first/save" method="post">
+              		<tr>
+            				<td><label for="day-eto-start" class="pickerlabel"> día </label></td>
+            				<td><label for="month-eto-start" class="pickerlabel"> mes </label></td>
+            				<td><label for="year-eto-start" class="pickerlabel"> año </label></td>
+                		
+                	</tr>
+                	<tr>
+		 								<td><input size="2" name="" id= "day-eto-start" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="2" name="" id="month-eto-start" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="4" name="" id="year-eto-start" value=<%="1980"%> style="width: 50px;"></td>
+	
+                  </tr>
+                </form>
+              
+            	</tbody>
+            </table>                   	 
+    			</div>
+        </div>
+               	
+        <div class="pickerlabel" id="eto_date_end"> Fecha de termino
+          
+    	
+            
+          <div class="btn-group btn-block"  style="margin-top: 5px;">
+          	<table style="width: 20px;">
+          		<tbody style="width: 20px;">
+          			
+              	<form accept-charset="UTF-8" action="/first/save" method="post">
+              		<tr>
+            				<td><label for="day-eto-end" class="pickerlabel"> día </label></td>
+            				<td><label for="month-eto-end" class="pickerlabel"> mes </label></td>
+            				<td><label for="year-eto-end" class="pickerlabel"> año </label></td>
+                		
+                	</tr>
+                	<tr>
+		 								<td><input size="2" name="" id= "day-eto-end" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="2" name="" id="month-eto-end" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="4" name="" id="year-eto-end" value=<%="1980"%> style="width: 50px;"></td>
+	
+                  </tr>
+                </form>
+              
+            	</tbody>
+            </table>                   	 
+    			</div>
+        </div>
+                       
+        <div class="pickerlabel" id="pr_date_start"> Fecha de inicio
+          
+  	
+          <div class="btn-group btn-block" style="margin-top: 5px;">
+          	<table style="width: 20px;">
+          		<tbody style="width: 20px;">
+          			
+              	<form accept-charset="UTF-8" action="/first/save" method="post">
+              		<tr>
+            				
+            				<td><label for="month-pr-start" class="pickerlabel"> mes </label></td>
+            				<td><label for="year-pr-start" class="pickerlabel"> año </label></td>
+                		
+                	</tr>
+                	<tr>
+
+                		<td><input type="2" name="" id="month-pr-start" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="4" name="" id="year-pr-start" value=<%="1981"%> style="width: 50px;"></td>
+	
+                  </tr>
+                </form>
+              
+            	</tbody>
+           	</table>
+      		</div>
+        </div>
+             	
+        <div class="pickerlabel" id="pr_date_end"> Fecha de termino
+          
+  	
+          <div class="btn-group btn-block" style="margin-top: 5px;">
+          	<table style="width: 20px;">
+          		<tbody style="width: 20px;">
+          			
+              	<form accept-charset="UTF-8" action="/first/save" method="post">
+              		<tr>
+            				
+            				<td><label for="month-pr-end" class="pickerlabel"> mes </label></td>
+            				<td><label for="year-pr-end" class="pickerlabel"> año </label></td>
+                		
+                	</tr>
+                	<tr>
+
+                		<td><input type="2" name="" id="month-pr-end" value=<%="01"%> style="width: 40px;"></td>
+                		<td><input type="4" name="" id="year-pr-end" value=<%="1981"%> style="width: 50px;"></td>
+	
+                  </tr>
+                </form>
+              
+            	</tbody>
+           	</table>
+      		</div>
+        </div>
+        <div class = "row">
+          <div class="col-12">
+           <div class="pickerlabel_title"> COORDENADAS
+              <div class="tool-tip">
+              <span class="tool-tip__icon_1" title="Ingresa las coordenadas manualmente o puedes interactuar con el mapa haciendo click">?</span>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+              
+            <label for="latInput" class="pickerlabel">Latitude</label>
+          </div>
+          <div class="col-8">
+            <input id="latInput"/>
+          </div>
+        </div>
+          
+        <div class = "row">
+          <div class="col-4">
+              
+            <label for="lngInput"  class="pickerlabel" >Longitude</label>
+          </div>
+          <div class="col-8">  
+            <input id="lngInput" />
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="col-12">
+              
+            <div class="btn-group btn-block"style="margin-top: 5px;">
+            	<div class="btn-group btn-block"  style="margin-top: 5px;">
+                  	<button id="average" type="button" class="btn btn-outline-info button_size" style="width:20%;" >GRAFICAR PROMEDIO</button>
+                  	                             
+             
+       				</div>
+        		</div>
+          </div>
+        </div>
+        
+
+
+
+        <br>
+      </div>
+    </div>
+    <div id="map" >
   
 			
-		</div>
-    
+		</div>   
   
-    
- 
- 	</div>
+  </div>
  </div>
 
  <div style="background-color: #eeeeee;padding: 10px; margin: 10px">
