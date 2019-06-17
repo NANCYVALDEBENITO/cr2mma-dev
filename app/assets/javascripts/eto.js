@@ -420,71 +420,52 @@ $(document).on('turbolinks:load', function() {
             });
             for (e = 0; e < url.length; e++) { 
                 var items =[];
-                
-                // $.ajax({
-                //     url: url[e],
-                //     type: 'GET',
-                //     dataType: 'json',
-                //     cache: false,
-                //     success: function(data){
-                                                                        
-                //         $.each(data.features, function (key, val) {
-                //             $.each(val.geometry.coordinates, function(i,j){ 
-                //                 for (f = 0; f < j.length; f++) { 
-                //                     if (lat == j[f][0] && lon == j[f][1]){
-                //                         $.each(j, function(i,j){
-                //                             if (lat == j[0] && lon == j[1]){
-                //                                 $.each(val.properties, function(u,v){
-                //                                     items.push( v );
-                //                                 })
-                //                             }
 
-                //                         })
-                //                     }
-                                    
-                //                 } 
-                //             })
-                            
-
-                //         })
-                //         console.log(data)
-                    
-                    
-                    
-                //     }
-                //   });
-             
                 $.getJSON(url[e], function (data) {
                     
                     console.log(url[e])
-                    //console.log(data)
-                    console.log(parseFloat(lon)-0.1)
+                    console.log(data)
+                    //console.log(parseFloat(lon)-0.1)
                     $.each(data.features, function (key, val) {
-                        
+
                         $.each(val.geometry.coordinates, function(i,j){ 
                             for (f = 0; f < j.length; f++) { 
-                                //console.log(lon)
-                                if (j[f][0]==lon && j[f][1]==lat){
-                                    console.log("PROCESS ALL")
-                                    $.each(j, function(i,j){
-                                        console.log(j)
-                                        if ( lon==j[0] && lat== j[1]){
+                               
+                                if (j[f][0]<=lon && lat<=j[f][1]){
+                                    console.log(j[f])
+                                    //console.log("PROCESS ALL")
+                                    //console.log(j[f][0])
+                                    //console.log(j[f][1])
+                                    //$.each(j, function(i,j){
+                                     //   console.log(j)
+                                      //  if ( lon==j[0] && lat== j[1]){
+                                       //     console.log(j[0])
+                                        //    console.log(j[1])
                                             //console.log("PROCESSING")
-                                            $.each(val.properties, function(u,v){
-                                                items.push( v );
-                                            })
-                                        }
 
-                                    })
+                                            $.each(val.properties, function(u,v){
+                                                if (v <0) {
+                                                    console.log("value -9999")
+                                                }else{
+                                                items.push( v );
+                                                console.log[v]
+                                                //console.log(items)
+                                            }
+                                            })
+                                        //}
+
+                                    //})
                                 }
                             }  
                         })
+                        data ={}
                     })
+                    
                     data ={}
-                    //console.log(data)
                 });
                                                           
                 // })
+                console.log(items)
                 chart.push(Geofunction.average(items));
               
             }
@@ -510,12 +491,12 @@ $(document).on('turbolinks:load', function() {
             Plotly.newPlot('chart', dataseries, layout);
 
         }
-        //var latlngEvent =  [$('#latInput').val() , $('#lngInput').val()]
+        var latlngEvent =  [$('#latInput').val() , $('#lngInput').val()]
       
-        average_chart(-45.20000141851692,-72.5999984) //longitude, latitude
+        //average_chart(-45.20000141851692,-72.5999984) //longitude, latitude
         //console.log(latlngEvent[0])
         //console.log(latlngEvent[1])
-        //average_chart(latlngEvent[0], latlngEvent[1])
+        average_chart(latlngEvent[0], latlngEvent[1])
 
        
 
