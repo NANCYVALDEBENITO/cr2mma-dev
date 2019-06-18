@@ -4,7 +4,7 @@
 
 .container_v {
     position: relative;
-    height: 81vh;
+    height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -28,6 +28,36 @@
   border-radius: 5px; 
   max-width: 700px;
   position: relative
+}
+.margin-div{
+  margin-top: 5px;
+}
+.width-button{
+  width:50%;
+}
+.width-table{
+  width: 20px;
+}
+.width-button-small{
+  width:20%;
+}
+.style-char-div{
+  background-color: #eeeeee;
+  padding: 10px; 
+  margin: 10px
+}
+.margin-copyright{
+  margin: 10px;
+}
+.input-day-month{
+  width: 40px;
+}
+.container-form{
+  text-align:left;
+  margin:100px;
+}
+.input-year{
+  width: 50px;
 }
 .config{
   min-width: 250px;

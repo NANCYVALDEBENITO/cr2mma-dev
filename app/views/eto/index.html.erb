@@ -13,9 +13,9 @@
         	</div>
           <div class="col-12">
             <label class="pickerlabel"> Selecciona la variable </label>
-            <div class="btn-group btn-block" style="margin-top: 5px;">
-            	<button id="pr" type="button" class="btn btn-outline-info button_size" style="width:50%;">PRECIPITACIÓN</button>
-            	<button id="eto"  type="button" class="btn btn-outline-info active button_size" style="width:50%;" >EVAPOTRANSPIRACIÓN</button>
+            <div class="btn-group btn-block margin-div">
+            	<button id="pr" type="button" class="btn btn-outline-info button_size width-button">PRECIPITACIÓN</button>
+            	<button id="eto"  type="button" class="btn btn-outline-info active button_size width-button" >EVAPOTRANSPIRACIÓN</button>
            
        
         		</div>
@@ -41,9 +41,9 @@
             <div class="pickerlabel" id="eto_date"> Ingresa la fecha del archivo a visualizar
               
                 
-              <div class="btn-group btn-block"  style="margin-top: 5px;">
-              	<table style="width: 20px;">
-              		<tbody style="width: 20px;">
+              <div class="btn-group btn-block margin-div">
+              	<table class="width-table">
+              		<tbody class="width-table">
               			
                   	<form accept-charset="UTF-8" action="/first/save" method="post">
                   		<tr>
@@ -53,9 +53,9 @@
                     		
                     	</tr>
                     	<tr>
-				 								<td><input size="2" name="" id= "day-eto" value=<%="01"%> style="width: 40px;"></td>
-                    		<td><input type="2" name="" id="month-eto" value=<%="01"%> style="width: 40px;"></td>
-                    		<td><input type="4" name="" id="year-eto" value=<%="1980"%> style="width: 50px;"></td>
+				 								<td><input size="2" name="" id= "day-eto" value=<%="01"%> class="input-day-month"></td>
+                    		<td><input type="2" name="" id="month-eto" value=<%="01"%> class="input-day-month"></td>
+                    		<td><input type="4" name="" id="year-eto" value=<%="1980"%> class="input-year"></td>
 			
                       </tr>
                     </form>
@@ -68,9 +68,9 @@
             <div class="pickerlabel" id="pr_date"> Ingresa la fecha del archivo a visualizar
              
       	
-              <div class="btn-group btn-block" style="margin-top: 5px;">
-              	<table style="width: 20px;">
-              		<tbody style="width: 20px;">
+              <div class="btn-group btn-block margin-div">
+              	<table class="width-table">
+              		<tbody class="width-table">
               			
                   	<form accept-charset="UTF-8" action="/first/save" method="post">
                   		<tr>
@@ -81,8 +81,8 @@
                     	</tr>
                     	<tr>
 
-                    		<td><input type="2" name="" id="month-pr" value=<%="01"%> style="width: 40px;"></td>
-                    		<td><input type="4" name="" id="year-pr" value=<%="1981"%> style="width: 50px;"></td>
+                    		<td><input type="2" name="" id="month-pr" value=<%="01"%> class="input-day-month"></td>
+                    		<td><input type="4" name="" id="year-pr" value=<%="1981"%> class="input-year"></td>
 			
                       </tr>
                     </form>
@@ -95,9 +95,9 @@
             <div class="row">
               <div class="col-12">
                   
-                <div class="btn-group btn-block"style="margin-top: 5px;">
-                	<div class="btn-group btn-block"  style="margin-top: 5px;">
-                      	<button id="restart" type="button" class="btn btn-outline-info button_size" style="width:20%;" >CARGAR</button>
+                <div class="btn-group btn-block margin-div">
+                	<div class="btn-group btn-block margin-div">
+                      	<button id="restart" type="button" class="btn btn-outline-info button_size width-button-small" >CARGAR</button>
                       	                             
                  
            				</div>
@@ -115,8 +115,8 @@
             	</div>
               <div class="col-12">
                 <label class="pickerlabel"> Descargar como geojson </label>
-                <div class="btn-group btn-block" style="margin-top: 5px;">
-                  	<button id="geojson" type="button" class="btn btn-outline-info button_size" style="width:20%;">DOWNLOAD</button>
+                <div class="btn-group btn-block margin-div">
+                  	<button id="geojson" type="button" class="btn btn-outline-info button_size width-button-small">DOWNLOAD</button>
                
             		</div>
           		</div>
@@ -146,9 +146,9 @@
           
     	
             
-          <div class="btn-group btn-block"  style="margin-top: 5px;">
-          	<table style="width: 20px;">
-          		<tbody style="width: 20px;">
+          <div class="btn-group btn-block margin-div">
+          	<table class="width-table">
+          		<tbody class="width-table">
           			
               	<form accept-charset="UTF-8" action="/first/save" method="post">
               		<tr>
@@ -158,9 +158,9 @@
                 		
                 	</tr>
                 	<tr>
-		 								<td><input size="2" name="" id= "day-eto-start" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="2" name="" id="month-eto-start" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="4" name="" id="year-eto-start" value=<%="1980"%> style="width: 50px;"></td>
+		 								<td><input size="2" name="" id= "day-eto-start" value=<%="01"%> class="input-day-month;"></td>
+                		<td><input type="2" name="" id="month-eto-start" value=<%="01"%> class="input-day-month"></td>
+                		<td><input type="4" name="" id="year-eto-start" value=<%="1980"%> class="input-year"></td>
 	
                   </tr>
                 </form>
@@ -174,9 +174,9 @@
           
     	
             
-          <div class="btn-group btn-block"  style="margin-top: 5px;">
-          	<table style="width: 20px;">
-          		<tbody style="width: 20px;">
+          <div class="btn-group btn-block margin-div">
+          	<table class="width-table">
+          		<tbody class="width-table">
           			
               	<form accept-charset="UTF-8" action="/first/save" method="post">
               		<tr>
@@ -186,9 +186,9 @@
                 		
                 	</tr>
                 	<tr>
-		 								<td><input size="2" name="" id= "day-eto-end" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="2" name="" id="month-eto-end" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="4" name="" id="year-eto-end" value=<%="1980"%> style="width: 50px;"></td>
+		 								<td><input size="2" name="" id= "day-eto-end" value=<%="01"%> class="input-day-month"></td>
+                		<td><input type="2" name="" id="month-eto-end" value=<%="01"%> class="input-day-month"></td>
+                		<td><input type="4" name="" id="year-eto-end" value=<%="1980"%> class="input-year"></td>
 	
                   </tr>
                 </form>
@@ -201,9 +201,9 @@
         <div class="pickerlabel" id="pr_date_start"> Fecha de inicio
           
   	
-          <div class="btn-group btn-block" style="margin-top: 5px;">
-          	<table style="width: 20px;">
-          		<tbody style="width: 20px;">
+          <div class="btn-group btn-block margin-div">
+          	<table class="width-table">
+          		<tbody class="width-table">
           			
               	<form accept-charset="UTF-8" action="/first/save" method="post">
               		<tr>
@@ -214,8 +214,8 @@
                 	</tr>
                 	<tr>
 
-                		<td><input type="2" name="" id="month-pr-start" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="4" name="" id="year-pr-start" value=<%="1981"%> style="width: 50px;"></td>
+                		<td><input type="2" name="" id="month-pr-start" value=<%="01"%> class="input-day-month"></td>
+                		<td><input type="4" name="" id="year-pr-start" value=<%="1981"%> class="input-year"></td>
 	
                   </tr>
                 </form>
@@ -228,9 +228,9 @@
         <div class="pickerlabel" id="pr_date_end"> Fecha de termino
           
   	
-          <div class="btn-group btn-block" style="margin-top: 5px;">
-          	<table style="width: 20px;">
-          		<tbody style="width: 20px;">
+          <div class="btn-group btn-block margin-div">
+          	<table class="width-table">
+          		<tbody class="width-table">
           			
               	<form accept-charset="UTF-8" action="/first/save" method="post">
               		<tr>
@@ -241,8 +241,8 @@
                 	</tr>
                 	<tr>
 
-                		<td><input type="2" name="" id="month-pr-end" value=<%="01"%> style="width: 40px;"></td>
-                		<td><input type="4" name="" id="year-pr-end" value=<%="1981"%> style="width: 50px;"></td>
+                		<td><input type="2" name="" id="month-pr-end" value=<%="01"%> class="input-day-month"></td>
+                		<td><input type="4" name="" id="year-pr-end" value=<%="1981"%> class="input-year"></td>
 	
                   </tr>
                 </form>
@@ -284,9 +284,9 @@
         <div class="row">
           <div class="col-12">
               
-            <div class="btn-group btn-block"style="margin-top: 5px;">
-            	<div class="btn-group btn-block"  style="margin-top: 5px;">
-                  	<button id="average" type="button" class="btn btn-outline-info button_size" style="width:20%;" >GRAFICAR PROMEDIO</button>
+            <div class="btn-group btn-block margin-div">
+            	<div class="btn-group btn-block margin-div">
+                  	<button id="average" type="button" class="btn btn-outline-info button_size width-button-small" >GRAFICAR PROMEDIO</button>
                   	                             
              
        				</div>
@@ -308,7 +308,7 @@
   </div>
  </div>
 
- <div style="background-color: #eeeeee;padding: 10px; margin: 10px">
+ <div class="style-char-div">
  	
   <div id="chart" >
   
@@ -316,6 +316,7 @@
   </div>
  </div>
 
- <h6 style="margin: 10px">autor: nvaldebenito</h6>
+ <h6 class="margin-copyright">autor: nvaldebenito</h6>
+ <%= image_tag("copyright.jpg") %>
  
 

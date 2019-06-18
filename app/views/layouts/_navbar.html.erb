@@ -3,22 +3,38 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <% if user_signed_in? %>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li><a class="navbar-brand" href="<%= edit_user_registration_path %>"><%= current_user.name %><span class="sr-only navbar-brand"></span></a></li>
-          <li><a href="<%= destroy_user_session_path %>" class="navbar-brand" data-method="DELETE">Log out<span class="sr-only">(current)</span></a></li>
-          <li><a href="<%= about_about_path %>" class="navbar-brand"> Acerca de la plataforma </a></li>
-          <li><a href="<%= about_example_path %>" class="navbar-brand"> Ejemplos de uso </a></li>
-          <li><a href="<%= root_path %>" class="navbar-brand"> Ir a la plataforma </a></li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="<%= edit_user_registration_path %>"><%= current_user.name %><span class="sr-only navbar-brand"></span></a>
+          </li>
+          <li  class="nav-item">
+            <a href="<%= destroy_user_session_path %>" class="navbar-brand" data-method="DELETE">Log out<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="<%= about_about_path %>" class="navbar-brand"> Acerca de la plataforma </a>
+          </li>
+          <li class="nav-item">
+            <a href="<%= about_example_path %>" class="navbar-brand"> Ejemplos de uso </a>
+          </li>
+          <li class="nav-item">
+            <a href="<%= root_path %>" class="navbar-brand"> Ir a la plataforma </a>
+          </li>
                         
         </ul>
       </div><!-- /.navbar-collapse -->
     <% else %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li><a href="<%= user_session_path %>" class="navbar-brand" data-method="POST">Log in<span class="sr-only">(current)</span></a></li>
-          <li><a href="<%= about_about_path %>" class="navbar-brand"> Acerca de la plataforma </a></li>
-          <li><a href="<%= about_example_path %>" class="navbar-brand"> Ejemplos de uso </a></li>
+          <li class="nav-item">
+            <a href="<%= user_session_path %>" class="navbar-brand" data-method="POST">Log in<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="<%= about_about_path %>" class="navbar-brand"> Acerca de la plataforma </a>
+          </li>
+          <li class="nav-item">
+            <a href="<%= about_example_path %>" class="navbar-brand"> Ejemplos de uso </a>
+          </li>
   
         </ul>
       </div>

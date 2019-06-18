@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'country_select', '~> 4.0'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'leaflet-rails', '~> 0.7.7'
 gem 'chartkick'
