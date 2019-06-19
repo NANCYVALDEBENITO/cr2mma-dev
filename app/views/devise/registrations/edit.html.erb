@@ -13,11 +13,19 @@
   </div>
   <div class="field">
     <%= f.label :country %><br />
-    <%= f.text_field :country, autofocus: true, autocomplete: "country" %>
+    <div class="form-row">
+   <%= f.country_select(:country, {selected: @user.country}, {class: "col-md-2 custom-select custom-select-sm mb-3"}) %>
+    </div>
+
   </div>
   <div class="field">
-    <%= f.label :area %><br />
-    <%= f.text_field :area, autofocus: true, autocomplete: "area" %>
+    
+    <%= f.label :area , :class =>"my-1 mr-2" %>
+    <div class="form-row">
+    <%= f.select( :area, options_for_select(%w[meteorología hidrología agro/agroindustria/riego pesca/acuicultura forestal ambiental construcción minería energía climatología]), {selected: @user.area}, {:class =>'col-md-2 custom-select custom-select-sm mb-3'})  %>
+    </div>
+
+
   </div>
   <div class="field">
     <%= f.label :email %><br />
