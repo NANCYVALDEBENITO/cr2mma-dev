@@ -33,12 +33,12 @@ ActiveAdmin.register User do
  	 end
  	 div class: "row" do
 		 div class: "col-6" do
-			 panel "Distribución local de usuarios" do
+			 panel "Distribución local de usuarios countries:ISO_3166-1_alpha-2" do
 			  render partial: 'shared/chart2'
 			 end
 		 end
 		 div class: "col-6" do
-		     panel "Mapeo de usuarios en el mundo" do
+		     panel "Mapa de usuarios en el mundo" do
 		      render partial: 'shared/chart3'
 		     end
 		 end

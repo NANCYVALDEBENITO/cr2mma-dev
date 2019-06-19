@@ -11,7 +11,7 @@
   <div class="field">
     <%= f.label :country %><br />
     <div class="form-row">
-   <%= f.country_select(:country, {selected: @user.country}, {class: "col-md-2 custom-select custom-select-sm mb-3"}) %>
+   <%= f.country_select(:country, { priority_countries: ["CL"] }, {class: "col-md-2 custom-select custom-select-sm mb-3"}) %>
     </div>
 
   </div>
