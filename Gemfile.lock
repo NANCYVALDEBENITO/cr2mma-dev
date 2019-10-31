@@ -202,7 +202,7 @@ GEM
     narray_miss (1.4.0)
       narray
     nio4r (2.3.1)
-    nokogiri (1.10.2)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     openlayers-rails (0.0.4)
       railties (>= 3.1)
